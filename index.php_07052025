@@ -1,0 +1,552 @@
+<?
+require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
+$APPLICATION->SetPageProperty("description", "У нас вы найдете все необходимое для строительства и ремонта. Огромный ассортимент качественных товаров от надежных производителей!");
+$APPLICATION->SetPageProperty("keywords", "кубатура, кубатура самара, кубатура самара официальный, кубатура сайт, сайт кубатура самара, кубатура официальный сайт, кубатура самара официальный сайт");
+$APPLICATION->SetPageProperty("description",
+    "Центр Дизайна Интерьера и Ремонта Кубатура - крупнейший в Самаре специализированный магазин");
+$APPLICATION->SetPageProperty("keywords",
+    "Кубатура, стройматериалы в Самаре, строительно-отделочные материалы, отделочные материалы, товары для ремонта, отделочные работы, центр строительства и ремонта, сантехника, доски, загородный дом, панели, краска, штукатурка, смеси, цемент, двери, паркет");
+$APPLICATION->SetPageProperty("title", "Официальный сайт Кубатура Самара ");
+$APPLICATION->SetTitle("Кубатура - Центр Дизайна Интерьера и Ремонта в Самаре");
+?><?$APPLICATION->IncludeComponent(
+	"kotstudio:shop.index",
+	"",
+Array()
+);?><noindex> <section class="similar similar_home">
+<div class="container t">
+	<div class="title">
+		<div class="title__grid">
+			<div class="title__main">
+				<div class="tabs">
+					<div class="tabs__grid tabs__caption">
+ <span class="tabs__item active">#Кубатура_sale</span> <span class="tabs__item">Рекомендуем</span> <span class="tabs__item">Новинки</span>
+					</div>
+				</div>
+			</div>
+			<div class="title__nav">
+				<div class="similar-nav swiper-nav">
+					<div class="swiper-button-prev">
+						<i class="ic ic-prev"></i>
+					</div>
+					<div class="swiper-button-next">
+						<i class="ic ic-next"></i>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="vp" class="tabs__content active similar__slider swiper-container ">
+		<div class="swiper-wrapper">
+			 <?
+                $GLOBALS['arrFilterTOP'] = array("PROPERTY_RECOMEND_VALUE" => "Y");
+
+                $APPLICATION->IncludeComponent(
+                    "bitrix:catalog.top",
+                    "topr",
+                    array(
+                        "ACTION_VARIABLE" => "action",
+                        "ADD_PICT_PROP" => "-",
+                        "ADD_PROPERTIES_TO_BASKET" => "Y",
+                        "BASKET_URL" => "/personal/basket.php",
+                        "CACHE_FILTER" => "N",
+                        "CACHE_GROUPS" => "Y",
+                        "CACHE_TIME" => "36000000",
+                        "CACHE_TYPE" => "A",
+                        "COMPARE_NAME" => "CATALOG_COMPARE_LIST",
+                        "COMPATIBLE_MODE" => "Y",
+                        "DETAIL_URL" => "",
+                        "DISPLAY_COMPARE" => "N",
+                        "ELEMENT_COUNT" => "9",
+                        "ELEMENT_SORT_FIELD" => "sort",
+                        "ELEMENT_SORT_FIELD2" => "id",
+                        "ELEMENT_SORT_ORDER" => "asc",
+                        "ELEMENT_SORT_ORDER2" => "desc",
+                        "ENLARGE_PRODUCT" => "STRICT",
+                        "FILTER_NAME" => "arrFilterTOP",
+                        "IBLOCK_ID" => "11",
+                        "IBLOCK_TYPE" => "content",
+                        "LABEL_PROP" => array(
+                            0 => "RECOMEND",
+                        ),
+                        "LABEL_PROP_MOBILE" => array(
+                            0 => "RECOMEND",
+                        ),
+                        "LABEL_PROP_POSITION" => "top-left",
+                        "LINE_ELEMENT_COUNT" => "3",
+                        "MESS_BTN_ADD_TO_BASKET" => "В корзину",
+                        "MESS_BTN_BUY" => "Купить",
+                        "MESS_BTN_COMPARE" => "Сравнить",
+                        "MESS_BTN_DETAIL" => "Подробнее",
+                        "MESS_NOT_AVAILABLE" => "Нет в наличии",
+                        "OFFERS_LIMIT" => "5",
+                        "PARTIAL_PRODUCT_PROPERTIES" => "N",
+                        "PRICE_CODE" => array(),
+                        "PRICE_VAT_INCLUDE" => "Y",
+                        "PRODUCT_BLOCKS_ORDER" => "price,props,sku,quantityLimit,quantity,buttons",
+                        "PRODUCT_ID_VARIABLE" => "id",
+                        "PRODUCT_PROPS_VARIABLE" => "prop",
+                        "PRODUCT_QUANTITY_VARIABLE" => "quantity",
+                        "PRODUCT_ROW_VARIANTS" => "[{'VARIANT':'2','BIG_DATA':false},{'VARIANT':'2','BIG_DATA':false},{'VARIANT':'2','BIG_DATA':false}]",
+                        "PRODUCT_SUBSCRIPTION" => "Y",
+                        "PROPERTY_CODE_MOBILE" => array(),
+                        "ROTATE_TIMER" => "30",
+                        "SECTION_URL" => "",
+                        "SEF_MODE" => "N",
+                        "SHOW_PAGINATION" => "Y",
+                        "SHOW_PRICE_COUNT" => "1",
+                        "SHOW_SLIDER" => "Y",
+                        "SLIDER_INTERVAL" => "3000",
+                        "SLIDER_PROGRESS" => "N",
+                        "TEMPLATE_THEME" => "blue",
+                        "USE_ENHANCED_ECOMMERCE" => "N",
+                        "USE_PRICE_COUNT" => "N",
+                        "USE_PRODUCT_QUANTITY" => "N",
+                        "VIEW_MODE" => "SECTION",
+                        "COMPONENT_TEMPLATE" => "topr"
+                    ),
+                    false
+                ); ?>
+		</div>
+		<div class="action-box">
+ <a href="/vygodnaya-pokupka/" class="btn">Все товары #Кубатура_sale</a>
+		</div>
+	</div>
+	<div id="recomend" class="tabs__content similar__slider swiper-container">
+		<div class="swiper-wrapper">
+			 <?
+                $GLOBALS['arrFilterTOP'] = array("PROPERTY_RECOMEND_VALUE" => "Y");
+
+                $APPLICATION->IncludeComponent(
+                    "bitrix:catalog.top",
+                    "topr",
+                    array(
+                        "ACTION_VARIABLE" => "action",
+                        "ADD_PICT_PROP" => "-",
+                        "ADD_PROPERTIES_TO_BASKET" => "Y",
+                        "BASKET_URL" => "/personal/basket.php",
+                        "CACHE_FILTER" => "N",
+                        "CACHE_GROUPS" => "Y",
+                        "CACHE_TIME" => "36000000",
+                        "CACHE_TYPE" => "A",
+                        "COMPARE_NAME" => "CATALOG_COMPARE_LIST",
+                        "COMPATIBLE_MODE" => "Y",
+                        "DETAIL_URL" => "",
+                        "DISPLAY_COMPARE" => "N",
+                        "ELEMENT_COUNT" => "9",
+                        "ELEMENT_SORT_FIELD" => "sort",
+                        "ELEMENT_SORT_FIELD2" => "id",
+                        "ELEMENT_SORT_ORDER" => "asc",
+                        "ELEMENT_SORT_ORDER2" => "desc",
+                        "ENLARGE_PRODUCT" => "STRICT",
+                        "FILTER_NAME" => "arrFilterTOP",
+                        "IBLOCK_ID" => "7",
+                        "IBLOCK_TYPE" => "content",
+                        "LABEL_PROP" => array(
+                            0 => "RECOMEND",
+                        ),
+                        "LABEL_PROP_MOBILE" => array(
+                            0 => "RECOMEND",
+                        ),
+                        "LABEL_PROP_POSITION" => "top-left",
+                        "LINE_ELEMENT_COUNT" => "3",
+                        "MESS_BTN_ADD_TO_BASKET" => "В корзину",
+                        "MESS_BTN_BUY" => "Купить",
+                        "MESS_BTN_COMPARE" => "Сравнить",
+                        "MESS_BTN_DETAIL" => "Подробнее",
+                        "MESS_NOT_AVAILABLE" => "Нет в наличии",
+                        "OFFERS_LIMIT" => "5",
+                        "PARTIAL_PRODUCT_PROPERTIES" => "N",
+                        "PRICE_CODE" => array(),
+                        "PRICE_VAT_INCLUDE" => "Y",
+                        "PRODUCT_BLOCKS_ORDER" => "price,props,sku,quantityLimit,quantity,buttons",
+                        "PRODUCT_ID_VARIABLE" => "id",
+                        "PRODUCT_PROPS_VARIABLE" => "prop",
+                        "PRODUCT_QUANTITY_VARIABLE" => "quantity",
+                        "PRODUCT_ROW_VARIANTS" => "[{'VARIANT':'2','BIG_DATA':false},{'VARIANT':'2','BIG_DATA':false},{'VARIANT':'2','BIG_DATA':false}]",
+                        "PRODUCT_SUBSCRIPTION" => "Y",
+                        "PROPERTY_CODE_MOBILE" => array(),
+                        "ROTATE_TIMER" => "30",
+                        "SECTION_URL" => "",
+                        "SEF_MODE" => "N",
+                        "SHOW_PAGINATION" => "Y",
+                        "SHOW_PRICE_COUNT" => "1",
+                        "SHOW_SLIDER" => "Y",
+                        "SLIDER_INTERVAL" => "3000",
+                        "SLIDER_PROGRESS" => "N",
+                        "TEMPLATE_THEME" => "blue",
+                        "USE_ENHANCED_ECOMMERCE" => "N",
+                        "USE_PRICE_COUNT" => "N",
+                        "USE_PRODUCT_QUANTITY" => "N",
+                        "VIEW_MODE" => "SECTION",
+                        "COMPONENT_TEMPLATE" => "topr"
+                    ),
+                    false
+                ); ?>
+		</div>
+		<div class="action-box">
+ <a href="/catalog/" class="btn">Перейти в каталог</a>
+		</div>
+	</div>
+	<div id="new" class="tabs__content similar__slider swiper-container">
+		<div class="swiper-wrapper">
+			 <?
+                $GLOBALS['arrFilterTOP'] = array("PROPERTY_NEW_VALUE" => "Y");
+
+                $APPLICATION->IncludeComponent(
+                    "bitrix:catalog.top",
+                    "topr",
+                    array(
+                        "ACTION_VARIABLE" => "action",
+                        "ADD_PICT_PROP" => "-",
+                        "ADD_PROPERTIES_TO_BASKET" => "Y",
+                        "BASKET_URL" => "/personal/basket.php",
+                        "CACHE_FILTER" => "N",
+                        "CACHE_GROUPS" => "Y",
+                        "CACHE_TIME" => "36000000",
+                        "CACHE_TYPE" => "A",
+                        "COMPARE_NAME" => "CATALOG_COMPARE_LIST",
+                        "COMPATIBLE_MODE" => "Y",
+                        "DETAIL_URL" => "",
+                        "DISPLAY_COMPARE" => "N",
+                        "ELEMENT_COUNT" => "9",
+                        "ELEMENT_SORT_FIELD" => "sort",
+                        "ELEMENT_SORT_FIELD2" => "id",
+                        "ELEMENT_SORT_ORDER" => "asc",
+                        "ELEMENT_SORT_ORDER2" => "desc",
+                        "ENLARGE_PRODUCT" => "STRICT",
+                        "FILTER_NAME" => "arrFilterTOP",
+                        "IBLOCK_ID" => "7",
+                        "IBLOCK_TYPE" => "content",
+                        "LABEL_PROP" => array(
+                            0 => "RECOMEND",
+                        ),
+                        "LABEL_PROP_MOBILE" => array(
+                            0 => "RECOMEND",
+                        ),
+                        "LABEL_PROP_POSITION" => "top-left",
+                        "LINE_ELEMENT_COUNT" => "3",
+                        "MESS_BTN_ADD_TO_BASKET" => "В корзину",
+                        "MESS_BTN_BUY" => "Купить",
+                        "MESS_BTN_COMPARE" => "Сравнить",
+                        "MESS_BTN_DETAIL" => "Подробнее",
+                        "MESS_NOT_AVAILABLE" => "Нет в наличии",
+                        "OFFERS_LIMIT" => "5",
+                        "PARTIAL_PRODUCT_PROPERTIES" => "N",
+                        "PRICE_CODE" => array(),
+                        "PRICE_VAT_INCLUDE" => "Y",
+                        "PRODUCT_BLOCKS_ORDER" => "price,props,sku,quantityLimit,quantity,buttons",
+                        "PRODUCT_ID_VARIABLE" => "id",
+                        "PRODUCT_PROPS_VARIABLE" => "prop",
+                        "PRODUCT_QUANTITY_VARIABLE" => "quantity",
+                        "PRODUCT_ROW_VARIANTS" => "[{'VARIANT':'2','BIG_DATA':false},{'VARIANT':'2','BIG_DATA':false},{'VARIANT':'2','BIG_DATA':false}]",
+                        "PRODUCT_SUBSCRIPTION" => "Y",
+                        "PROPERTY_CODE_MOBILE" => array(),
+                        "ROTATE_TIMER" => "30",
+                        "SECTION_URL" => "",
+                        "SEF_MODE" => "N",
+                        "SHOW_PAGINATION" => "Y",
+                        "SHOW_PRICE_COUNT" => "1",
+                        "SHOW_SLIDER" => "Y",
+                        "SLIDER_INTERVAL" => "3000",
+                        "SLIDER_PROGRESS" => "N",
+                        "TEMPLATE_THEME" => "blue",
+                        "USE_ENHANCED_ECOMMERCE" => "N",
+                        "USE_PRICE_COUNT" => "N",
+                        "USE_PRODUCT_QUANTITY" => "N",
+                        "VIEW_MODE" => "SECTION",
+                        "COMPONENT_TEMPLATE" => "topr"
+                    ),
+                    false
+                ); ?>
+		</div>
+		<div class="action-box">
+ <a href="/catalog/" class="btn">Перейти в каталог</a>
+		</div>
+	</div>
+</div>
+ </section></noindex> <noindex><section class="news s-padding">
+<div class="container t">
+	<div class="title">
+		<div class="title__grid">
+			<div class="title__main">
+				<div class="tabs">
+					<div class="tabs__grid tabs__caption">
+ <span class="tabs__item tabs__item_medium active">Все</span> <span class="tabs__item tabs__item_medium">Новости</span> <span class="tabs__item tabs__item_medium">Акции</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tabs__content active">
+		 <?$APPLICATION->IncludeComponent(
+	"bitrix:news.list",
+	"index",
+	array(
+		"ACTIVE_DATE_FORMAT" => "j F",
+		"ADD_SECTIONS_CHAIN" => "N",
+		"AJAX_MODE" => "Y",
+		"AJAX_OPTION_ADDITIONAL" => "",
+		"AJAX_OPTION_HISTORY" => "N",
+		"AJAX_OPTION_JUMP" => "N",
+		"AJAX_OPTION_STYLE" => "N",
+		"CACHE_FILTER" => "N",
+		"CACHE_GROUPS" => "N",
+		"CACHE_TIME" => "36000000",
+		"CACHE_TYPE" => "A",
+		"CHECK_DATES" => "Y",
+		"COMPONENT_TEMPLATE" => "index",
+		"DETAIL_URL" => "",
+		"DISPLAY_BOTTOM_PAGER" => "Y",
+		"DISPLAY_DATE" => "Y",
+		"DISPLAY_NAME" => "Y",
+		"DISPLAY_PICTURE" => "Y",
+		"DISPLAY_PREVIEW_TEXT" => "Y",
+		"DISPLAY_TOP_PAGER" => "N",
+		"FIELD_CODE" => array(
+			0 => "",
+			1 => "",
+		),
+		"FILTER_NAME" => "",
+		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
+		"IBLOCK_ID" => "5",
+		"IBLOCK_TYPE" => "content",
+		"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
+		"INCLUDE_SUBSECTIONS" => "Y",
+		"MESSAGE_404" => "",
+		"NEWS_COUNT" => "13",
+		"PAGER_BASE_LINK_ENABLE" => "N",
+		"PAGER_DESC_NUMBERING" => "N",
+		"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
+		"PAGER_SHOW_ALL" => "N",
+		"PAGER_SHOW_ALWAYS" => "N",
+		"PAGER_TEMPLATE" => ".default",
+		"PAGER_TITLE" => "Новости",
+		"PARENT_SECTION" => "",
+		"PARENT_SECTION_CODE" => "",
+		"PREVIEW_TRUNCATE_LEN" => "",
+		"PROPERTY_CODE" => array(
+			0 => "",
+			1 => "",
+		),
+		"SET_BROWSER_TITLE" => "N",
+		"SET_LAST_MODIFIED" => "N",
+		"SET_META_DESCRIPTION" => "N",
+		"SET_META_KEYWORDS" => "N",
+		"SET_STATUS_404" => "N",
+		"SET_TITLE" => "N",
+		"SHOW_404" => "N",
+		"SORT_BY1" => "ACTIVE_FROM",
+		"SORT_BY2" => "SORT",
+		"SORT_ORDER1" => "DESC",
+		"SORT_ORDER2" => "ASC",
+		"STRICT_SECTION_CHECK" => "N"
+	),
+	false
+);?>
+	</div>
+	<div class="tabs__content ">
+		 <?
+            $GLOBALS['arrFilterN'] = array("SECTION_ID" => 1);
+            $APPLICATION->IncludeComponent(
+                "bitrix:news.list",
+                "news",
+                array(
+                    "COMPONENT_TEMPLATE" => ".default",
+                    "IBLOCK_TYPE" => "content",
+                    "IBLOCK_ID" => "5",
+                    "NEWS_COUNT" => "13",
+                    "SORT_BY1" => "ACTIVE_FROM",
+                    "SORT_ORDER1" => "DESC",
+                    "SORT_BY2" => "SORT",
+                    "SORT_ORDER2" => "ASC",
+                    "FILTER_NAME" => "arrFilterN",
+                    "FIELD_CODE" => array(
+                        0 => "",
+                        1 => "",
+                    ),
+                    "PROPERTY_CODE" => array(
+                        0 => "",
+                        1 => "",
+                    ),
+                    "CHECK_DATES" => "Y",
+                    "DETAIL_URL" => "",
+                    "AJAX_MODE" => "N",
+                    "AJAX_OPTION_JUMP" => "N",
+                    "AJAX_OPTION_STYLE" => "N",
+                    "AJAX_OPTION_HISTORY" => "N",
+                    "AJAX_OPTION_ADDITIONAL" => "",
+                    "CACHE_TYPE" => "A",
+                    "CACHE_TIME" => "36000000",
+                    "CACHE_FILTER" => "N",
+                    "CACHE_GROUPS" => "N",
+                    "PREVIEW_TRUNCATE_LEN" => "",
+                    "ACTIVE_DATE_FORMAT" => "j F",
+                    "SET_TITLE" => "N",
+                    "SET_BROWSER_TITLE" => "N",
+                    "SET_META_KEYWORDS" => "N",
+                    "SET_META_DESCRIPTION" => "N",
+                    "SET_LAST_MODIFIED" => "N",
+                    "INCLUDE_IBLOCK_INTO_CHAIN" => "N",
+                    "ADD_SECTIONS_CHAIN" => "N",
+                    "HIDE_LINK_WHEN_NO_DETAIL" => "N",
+                    "PARENT_SECTION" => "",
+                    "PARENT_SECTION_CODE" => "",
+                    "INCLUDE_SUBSECTIONS" => "Y",
+                    "STRICT_SECTION_CHECK" => "N",
+                    "DISPLAY_DATE" => "Y",
+                    "DISPLAY_NAME" => "Y",
+                    "DISPLAY_PICTURE" => "Y",
+                    "DISPLAY_PREVIEW_TEXT" => "Y",
+                    "PAGER_TEMPLATE" => ".default",
+                    "DISPLAY_TOP_PAGER" => "N",
+                    "DISPLAY_BOTTOM_PAGER" => "Y",
+                    "PAGER_TITLE" => "Новости",
+                    "PAGER_SHOW_ALWAYS" => "N",
+                    "PAGER_DESC_NUMBERING" => "N",
+                    "PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
+                    "PAGER_SHOW_ALL" => "N",
+                    "PAGER_BASE_LINK_ENABLE" => "N",
+                    "SET_STATUS_404" => "N",
+                    "SHOW_404" => "N",
+                    "MESSAGE_404" => ""
+                ),
+                false
+            ); ?>
+	</div>
+	<div class="tabs__content ">
+		 <? $GLOBALS['arrFilterA'] = array("SECTION_ID" => 2);
+            $APPLICATION->IncludeComponent(
+                "bitrix:news.list",
+                "akciya",
+                array(
+                    "COMPONENT_TEMPLATE" => ".default",
+                    "IBLOCK_TYPE" => "content",
+                    "IBLOCK_ID" => "5",
+                    "NEWS_COUNT" => "13",
+                    "SORT_BY1" => "ACTIVE_FROM",
+                    "SORT_ORDER1" => "DESC",
+                    "SORT_BY2" => "SORT",
+                    "SORT_ORDER2" => "ASC",
+                    "FILTER_NAME" => "arrFilterA",
+                    "FIELD_CODE" => array(
+                        0 => "",
+                        1 => "",
+                    ),
+                    "PROPERTY_CODE" => array(
+                        0 => "",
+                        1 => "",
+                    ),
+                    "CHECK_DATES" => "Y",
+                    "DETAIL_URL" => "",
+                    "AJAX_MODE" => "N",
+                    "AJAX_OPTION_JUMP" => "N",
+                    "AJAX_OPTION_STYLE" => "N",
+                    "AJAX_OPTION_HISTORY" => "N",
+                    "AJAX_OPTION_ADDITIONAL" => "",
+                    "CACHE_TYPE" => "A",
+                    "CACHE_TIME" => "36000000",
+                    "CACHE_FILTER" => "N",
+                    "CACHE_GROUPS" => "N",
+                    "PREVIEW_TRUNCATE_LEN" => "",
+                    "ACTIVE_DATE_FORMAT" => "j F",
+                    "SET_TITLE" => "N",
+                    "SET_BROWSER_TITLE" => "N",
+                    "SET_META_KEYWORDS" => "N",
+                    "SET_META_DESCRIPTION" => "N",
+                    "SET_LAST_MODIFIED" => "N",
+                    "INCLUDE_IBLOCK_INTO_CHAIN" => "N",
+                    "ADD_SECTIONS_CHAIN" => "N",
+                    "HIDE_LINK_WHEN_NO_DETAIL" => "N",
+                    "PARENT_SECTION" => "",
+                    "PARENT_SECTION_CODE" => "",
+                    "INCLUDE_SUBSECTIONS" => "Y",
+                    "STRICT_SECTION_CHECK" => "N",
+                    "DISPLAY_DATE" => "Y",
+                    "DISPLAY_NAME" => "Y",
+                    "DISPLAY_PICTURE" => "Y",
+                    "DISPLAY_PREVIEW_TEXT" => "Y",
+                    "PAGER_TEMPLATE" => ".default",
+                    "DISPLAY_TOP_PAGER" => "N",
+                    "DISPLAY_BOTTOM_PAGER" => "Y",
+                    "PAGER_TITLE" => "Новости",
+                    "PAGER_SHOW_ALWAYS" => "N",
+                    "PAGER_DESC_NUMBERING" => "N",
+                    "PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
+                    "PAGER_SHOW_ALL" => "N",
+                    "PAGER_BASE_LINK_ENABLE" => "N",
+                    "SET_STATUS_404" => "N",
+                    "SHOW_404" => "N",
+                    "MESSAGE_404" => ""
+                ),
+                false
+            ); ?>
+	</div>
+	<div class="action-box">
+ <a href="/all_news/" class="btn">Все новости</a>
+	</div>
+</div>
+ </section></noindex> <section class="instagram">
+<div class="container">
+	<div class="instagram__wrap">
+		<div class="instagram__left">
+			 <? $APPLICATION->IncludeFile(SITE_DIR . "include/instagram__left.php", Array(),
+                    Array("MODE" => "php")); ?>
+		</div>
+		<div class="instagram__right">
+			<div class="instagram__grid">
+				 <? $APPLICATION->IncludeFile(SITE_DIR . "include/instagram__right.php", Array(),
+                        Array("MODE" => "php")); ?>
+			</div>
+		</div>
+	</div>
+</div>
+ </section> <section class="main-about s-padding">
+<div class="container">
+	<div class="about-banner">
+		<div class="about-banner__wrapper">
+			<div class="about-banner__wrap">
+				<div class="about-banner__content">
+					<h3><? $APPLICATION->IncludeFile(SITE_DIR . "include/about-banner__content.php", Array(),
+                                Array("MODE" => "php")); ?></h3>
+				</div>
+				 <? $APPLICATION->IncludeFile(SITE_DIR . "include/about-banner__arrow.php", Array(),
+                        Array("MODE" => "php")); ?>
+			</div>
+		</div>
+	</div>
+	 <?$APPLICATION->IncludeComponent(
+	"bitrix:news.line",
+	"index_tizer",
+	Array(
+		"ACTIVE_DATE_FORMAT" => "d.m.Y",
+		"CACHE_GROUPS" => "Y",
+		"CACHE_TIME" => "300",
+		"CACHE_TYPE" => "A",
+		"COMPONENT_TEMPLATE" => ".default",
+		"DETAIL_URL" => "",
+		"FIELD_CODE" => array(0=>"NAME",1=>"PREVIEW_TEXT",2=>"PROPERTY_URL",),
+		"IBLOCKS" => array(0=>"8",),
+		"IBLOCK_TYPE" => "content",
+		"NEWS_COUNT" => "20",
+		"SORT_BY1" => "ACTIVE_FROM",
+		"SORT_BY2" => "SORT",
+		"SORT_ORDER1" => "DESC",
+		"SORT_ORDER2" => "ASC"
+	)
+);?>
+</div>
+ </section>
+<?php if (!empty($_COOKIE['kek'])) {
+    $iblockId=11;
+    $arSort = array('ID' => 'ASC');
+//            $arFilter = array('ID' => $itemsId, 'IBLOCK_ID' => $iblockId, "ACTIVE" => "Y");
+    $arFilter = array('IBLOCK_ID' => $iblockId, 'ID' => Array(22655, 22657), "ACTIVE" => "Y");
+    $arSelect = array();
+    $res = CIBlockElement::getList($arSort, $arFilter, false, false, $arSelect);
+    $i = 0;
+    while ($ob = $res->GetNextElement()) {
+        $i++;
+    }
+    echo 'count';
+    dump($i);
+} ?><? require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php"); ?>

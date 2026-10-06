@@ -1,0 +1,2 @@
+<p class="dev-box__descr">Разработка сайтов в Самаре “Котстудио”</p>
+<a href="https://kotstudio.ru" class="dev-box__img"><img src="<?=SITE_TEMPLATE_PATH?>/img/dev.png" alt=""></a>

@@ -1,0 +1,67 @@
+.scs-cookies {
+	position: fixed;
+	left: 20px;
+	bottom: 20px;
+	border-radius: 8px;
+	background: #F7F7F7;
+	box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.25);
+	padding: 20px;
+	display: grid;
+	grid-template-columns: 1fr 130px;
+	gap: 30px;
+	width: 760px;
+	min-height: 90px;
+	font-size: 14px;
+	line-height: 1.2;
+	font-family: Arial, sans-serif;
+	box-sizing: border-box;
+	max-width: calc(100% - 40px);
+	z-index: 999;
+}
+.scs-cookies__title {
+	font-size: 18px;
+	font-weight: 600;
+	margin-bottom: 10px;
+}
+.scs-cookies__btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	border: none;
+	border-radius: 4px;
+	background: transparent;
+	height: 50px;
+	width: 100%;
+	max-width: 130px;
+	font-size: 16px;
+	font-weight: 600;
+	text-transform: uppercase;
+	background: linear-gradient(to bottom, #667800 0%, #667800 100%);
+	color: #fff;
+}
+.scs-cookies__btn:hover,
+.scs-cookies__btn:focus {
+	background: #566600;
+}
+
+@media (max-width: 991px) {
+	.scs-cookies {
+		grid-template-columns: 1fr;
+		gap: 15px;
+		min-height: 145px;
+	}
+}
+
+@media (max-width: 767px) {
+	.scs-cookies {
+		font-size: 12px;
+	}
+	.scs-cookies__title {
+		font-size: 14px;
+	}
+	.scs-cookies__btn {
+		font-size: 14px;
+		height: 40px;
+	}
+}

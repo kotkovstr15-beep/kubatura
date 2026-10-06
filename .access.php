@@ -1,0 +1,10 @@
+<?
+$PERM["designers"]["2"]="D";
+$PERM["designers"]["3"]="D";
+$PERM["designers"]["4"]="D";
+$PERM["konferents-zal"]["2"]="D";
+$PERM["konferents-zal"]["3"]="D";
+$PERM["konferents-zal"]["4"]="D";
+$PERM["konferents-zal"]["*"]="D";
+$PERM["/"]["*"]="R";
+?>

@@ -1,0 +1,10 @@
+.ic-ok svg{
+  fill:#b0cb1f;
+  padding-top: 3px;
+}
+.ic-ok svg:hover{
+  fill:#fff;
+}
+.ic-ok:hover svg{
+  fill:#fff;
+}

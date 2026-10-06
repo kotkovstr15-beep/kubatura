@@ -1,0 +1,181 @@
+@import "bourbon"
+@import "fonts"
+@import "vars"
+
+//Load Libs
+@import "../libs/normalize-css/normalize.css"
+@import "../libs/magnific-popup/magnific-popup.css"
+@import "../libs/swiper/swiper.min.css"
+@import "../libs/formstyler/jquery.formstyler.css"
+@import "../libs/formstyler/jquery.formstyler.theme.css"
+@import "../libs/range-slider/ion.rangeSlider.min.css"
+
+*
+	outline: none !important
+	box-sizing: border-box
+
+::placeholder
+	opacity: 1
+	color: #9F9F9F
+
+body
+	overflow-x: hidden
+	position: relative
+	min-width: 320px
+	background: #F8F8F8
+	font-family: $font
+	font-size: 18px
+	line-height: 1.65
+	color: #333
+
+.page-inner
+	background: #ECF3EC
+	#wrapper__center
+		background: url('../img/bg-elements/top-right.png') no-repeat 100% 0
+.page-error
+	#wrapper__center
+		background: none
+
+a
+	text-decoration: none
+	color: $c-2
+	&:hover
+		text-decoration: underline
+
+.link-dashed
+	border-bottom: 1px dashed
+	&:hover
+		text-decoration: none
+		border-color: transparent
+
+.link-head
+	color: inherit
+	transition: .2s
+	&:hover
+		text-decoration: none
+		color: $c-1
+
+button
+	cursor: pointer
+
+b, strong
+	font-weight: 600
+
+p
+	margin: 0 0 1rem
+
+ul, ol
+	margin: 0 0 1rem
+
+select
+	width: 100%
+	line-height: 1.45
+	font-size: 14px
+select[size]
+	padding: 8px 0
+	background: #fff
+	border: 1px solid #EBEBEB
+	border-radius: 3px
+	option
+		padding: 9px 29px
+		white-space: normal
+		transition: .2s
+		&:focus
+			background: #000
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6
+	margin: 0 0 1rem
+	font-weight: 600
+h1, .h1
+	text-transform: uppercase
+	line-height: 1.25
+	font-weight: 900
+	font-size: 80px
+h2, .h2
+	line-height: 1.25
+	font-size: 32px
+h3, .h3
+	line-height: 1.35
+	font-size: 26px
+h4, .h4
+	line-height: 1.45
+	text-transform: uppercase
+	font-size: 18px
+h5, .h5
+	line-height: 1.45
+	font-size: 18px
+h6, .h6
+	font-size: 16px
+
+table
+	border-collapse: collapse
+	border-spacing: 0
+
+img
+	display: inline-block
+	max-width: 100%
+	height: auto
+
+#wrapper
+	position: relative
+	display: flex
+	overflow: hidden
+	&__wrap
+		display: flex
+		flex-direction: column
+		min-height: 100vh
+		width: 100%
+	&__center
+		flex: 1 0 auto
+		width: 100%
+
+.clearfix:after
+	content: ''
+	display: table
+	clear: both
+
+.hidden
+	display: none
+
+.container
+	width: 1700px
+	margin: 0 auto
+	padding: 0 20px
+
+.img-box
+	position: relative
+	img
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		margin: auto
+		width: auto
+		height: auto
+		max-width: 100%
+		max-height: 100%
+
+.text-green
+	color: $c-1
+.text-blue
+	color: $c-2
+.text-orange
+	color: $c-3
+
+.s-margin
+	margin: 120px 0
+.s-padding
+	padding: 120px 0
+.s-inner
+	padding-top: 80px
+	margin-bottom: 120px
+	&_bg
+		margin-bottom: 0 !important
+		padding-bottom: 300px
+		background: url('../img/bg-elements/bottom-left.png') no-repeat bottom left
+
+.content
+	>:last-child
+		margin-bottom: 0

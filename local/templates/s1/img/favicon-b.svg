@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <title>Кубатура</title>
+  <rect width="64" height="64" rx="12" fill="#315f12"/>
+  <path d="M15 12h10v17l15-17h12L34 31l20 21H41L25 34v18H15z" fill="#fff"/>
+  <path d="M10 7h44" stroke="#9acb52" stroke-width="4" stroke-linecap="round"/>
+</svg>
+

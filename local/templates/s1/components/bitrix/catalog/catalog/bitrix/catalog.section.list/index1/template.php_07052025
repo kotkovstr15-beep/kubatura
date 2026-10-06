@@ -1,0 +1,32 @@
+<?if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();?>
+
+<?if (!empty($arResult)):?>
+<div class="categories">
+	<?foreach($arResult as $arItem):?>
+							<div class="categories__col">
+								<div class="category">
+									<div class="category__main">
+										<h4 class="category__head"><a href="<?=$arItem["SECTION_PAGE_URL"]?>" class="link-head"><?=$arItem["NAME"]?></a></h4>
+										<table class="category__specs">
+										<?foreach($arItem["CHILDREN"] as $arChild):?>
+											<tr>
+												<td><a class="title" href="<?=$arChild["SECTION_PAGE_URL"]?>"><?=$arChild["NAME"]?></a></td>
+												<td><a href="<?=$arChild["SECTION_PAGE_URL"]?>" rel="nofollow"><?=$arChild["ELEMENT_CNT"]?></a></td>
+											</tr>
+											<?endforeach;?>
+										</table>
+									</div>
+									<a href="<?=$arItem["SECTION_PAGE_URL"]?>" class="category__img" style="background-image: url('<?=$arItem["PICTURE"]['SRC']?>');"></a>
+								</div>
+							</div>
+	<?endforeach;?>
+</div>
+<?endif?>
+<div class="sm-padding">
+<? 
+$dbResult = CIBlock::GetByID($arParams['IBLOCK_ID']); 
+if($arIBlock = $dbResult->GetNext()) {
+  echo $arIBlock['DESCRIPTION'];
+}
+?>
+</div>

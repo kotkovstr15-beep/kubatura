@@ -1,0 +1,8 @@
+.category__specs a.title{color: #333;}
+
+.category__img img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+}

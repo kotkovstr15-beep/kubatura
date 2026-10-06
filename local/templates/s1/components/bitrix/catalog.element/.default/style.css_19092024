@@ -1,0 +1,38 @@
+.btn.btn_in-cart {
+    background: transparent;
+}
+
+.btn.btn_delete {
+    color: white;
+    margin-top: 10px;
+    background-color: #6c757d;
+}
+
+.btn.btn_middle_size {
+    font-size: 16px;
+}
+.price .btn.btn_small {
+  padding: 9px 20px;
+    min-width: 136px;
+    font-size: 10px;
+    margin-right: -21px;
+    margin-top: -10px;
+background: #0078bf;
+color: #fff;
+font-weight: bold;
+}
+.product-info__main .price{
+  display: flow-root;
+}
+@media only screen and (max-width: 1699px){
+  .price .btn.btn_small {
+    margin-right: -10px;
+
+  }
+}
+@media only screen and (max-width: 767px){
+  .price .btn.btn_small {
+  float: left;
+margin-left: 36px;
+}
+}

@@ -1,0 +1,164 @@
+/* Shop detail page ("Карточка магазина") + shop/brand catalog-filter listing.
+   Colors reuse the site's existing tokens only (sass/_vars.sass): $c-1 #B0CB1F, $c-2 #0078BF,
+   plus greys already used elsewhere on the site (#333 body text, #777, #d9d9d9, #f2f2f2). */
+.shop-page{--sp-blue:#0078bf;--sp-lime:#b0cb1f;--sp-ink:#333;--sp-ink-2:#777;--sp-line:#d9d9d9;--sp-line-soft:#eee;--sp-bg:#f2f2f2;--sp-radius:4px}
+
+/* ---------- shared slider arrow (photos + products; both are real Swiper sliders, site's bundled Swiper 4.5) ---------- */
+.shop-page__photos-prev,.shop-page__photos-next{position:absolute;top:50%;z-index:2;width:28px;height:28px;margin-top:-14px;border:none;border-radius:50%;background:rgba(255,255,255,.9);color:var(--sp-ink);display:grid;place-items:center;cursor:pointer;font-size:13px;transition:.2s}
+.shop-page__photos-prev{left:8px}
+.shop-page__photos-next{right:8px}
+.shop-page__photos-prev:hover,.shop-page__photos-next:hover{background:#fff;color:var(--sp-blue)}
+.shop-page__photos-prev.swiper-button-disabled,.shop-page__photos-next.swiper-button-disabled{opacity:.4;cursor:default;pointer-events:none}
+
+/* ---------- heading ---------- */
+.shop-page h1{font-weight:700;font-size:clamp(24px,2.6vw,34px);line-height:1.2;letter-spacing:-.01em;margin:18px 0 28px;color:var(--sp-ink)}
+.shop-page h2{font-weight:700;font-size:20px;line-height:1.25;letter-spacing:-.005em;margin:0 0 16px;color:var(--sp-ink)}
+.shop-page section{margin-top:44px}
+
+/* ---------- contact card ---------- */
+/* flex (not grid) so the layout still works with 2 items (no photos) or 3 (logo + contacts + photos) without a leftover empty column */
+.shop-page__card{display:flex;flex-wrap:wrap;gap:28px;align-items:flex-start;margin:24px 0}
+.shop-page__logo{flex:0 0 200px;width:200px;height:140px;padding:14px;background:#fff;border:1px solid var(--sp-line);border-radius:var(--sp-radius);display:flex;align-items:center;justify-content:center}
+.shop-page__logo img{max-width:100%;max-height:100%;object-fit:contain}
+.shop-page__contacts{flex:1 1 280px;min-width:260px}
+
+.shop-page__meta{display:flex;flex-wrap:wrap;gap:0 28px;margin:0 0 6px}
+.shop-page__meta div{padding:6px 0}
+.shop-page__meta dt{margin:0;font-size:11px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--sp-ink-2)}
+.shop-page__meta dd{margin:2px 0 0;font-size:15px;font-weight:600;color:var(--sp-ink)}
+
+.shop-page__tel{display:block;margin:10px 0 0;font-size:19px;font-weight:700;color:var(--sp-blue)}
+.shop-page__tel--plain{color:var(--sp-ink)}
+a.shop-page__tel:hover{text-decoration:underline}
+
+.shop-page__actions{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:16px}
+.shop-page__action{display:inline-flex;align-items:center;gap:6px;font-size:14px;font-weight:600;color:var(--sp-blue)}
+.shop-page__action:hover{text-decoration:underline}
+.shop-page__action--map:before{content:"⌖";font-size:16px;line-height:1}
+.shop-page__action--goods:after{content:"↓";font-size:13px;line-height:1}
+
+.shop-page__socials{display:flex;gap:8px;margin-top:14px}
+.shop-page__socials a{width:30px;height:30px;border-radius:50%;background:var(--sp-bg);border:1px solid var(--sp-line);display:grid;place-items:center;font-size:10px;font-weight:700;color:var(--sp-ink-2);text-decoration:none;transition:.2s}
+.shop-page__socials a:hover{border-color:var(--sp-blue);color:var(--sp-blue)}
+
+/* Same row as logo + contacts; a real Swiper slider showing up to 3 photos at once (slidesPerView in shop-page.js).
+   .swiper-container already gets position:relative;overflow:hidden from libs/swiper/swiper.min.css. */
+.shop-page__photos{flex:0 1 560px;min-width:0;height:170px;margin:0;border-radius:var(--sp-radius)}
+.shop-page__photos .swiper-slide img{display:block;width:100%;height:100%;object-fit:cover;background:var(--sp-bg)}
+
+/* ---------- descriptions ---------- */
+.shop-page__description{max-width:74ch}
+.shop-page__description .content{font-size:15px;line-height:1.65;color:var(--sp-ink)}
+.shop-page__description .content h3{font-size:16px;font-weight:700;margin:0 0 8px;color:var(--sp-ink)}
+.shop-page__description .content p{margin:0 0 12px}
+.shop-page__description .content ul,.shop-page__description .content ol{margin:0 0 12px;padding-left:20px}
+.shop-page__description .content li{margin-bottom:4px}
+.shop-page__description .content>:last-child{margin-bottom:0}
+
+/* ---------- brands ---------- */
+.shop-page__brands{list-style:none;display:flex;flex-wrap:wrap;gap:8px;margin:0;padding:0}
+.shop-page__brands a{display:inline-block;border:1px solid var(--sp-line);border-radius:20px;padding:6px 14px;font-size:13px;font-weight:600;color:var(--sp-ink);background:#fff;transition:.2s}
+.shop-page__brands a:hover{border-color:var(--sp-blue);color:var(--sp-blue);text-decoration:none}
+
+/* ---------- section heading row + controls (products / neighbors) ---------- */
+.shop-page__heading{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.shop-page__heading h2{margin-bottom:0}
+.shop-page__product-actions{display:flex;align-items:center;gap:14px}
+.shop-page__product-actions a{font-size:13.5px;font-weight:600;color:var(--sp-blue)}
+.shop-page__product-actions a:hover{text-decoration:underline}
+.shop-page__controls,.shop-page__product-actions{flex-wrap:nowrap}
+.shop-page__controls button,.shop-page__product-actions button{cursor:pointer;border:1px solid var(--sp-line);background:#fff;border-radius:4px;width:34px;height:32px;flex:none;color:var(--sp-ink);transition:.2s}
+.shop-page__controls button:hover,.shop-page__product-actions button:hover{border-color:var(--sp-blue);color:var(--sp-blue)}
+.shop-page__controls button:disabled,.shop-page__product-actions button:disabled,.shop-page__product-actions button.swiper-button-disabled{opacity:.4;cursor:default;border-color:var(--sp-line);color:var(--sp-ink-2)}
+
+/* ---------- products ---------- */
+.shop-page__products{display:flex;flex-wrap:wrap;gap:20px;margin:0;padding:0}
+.shop-page__product{flex:0 0 calc((100% - 100px)/6);min-width:0;border:1px solid var(--sp-line);border-radius:var(--sp-radius);background:#fff;overflow:hidden}
+.shop-page__product{display:flex;flex-direction:column}
+.shop-page__product .similar-item__content{flex:1 1 auto;display:flex;flex-direction:column;padding:10px 12px 14px;min-width:0}
+.shop-page__product .similar-item__head{height:auto;max-height:2.8em;overflow:hidden}
+.shop-page__product .similar-item__head a{font-size:12.5px;line-height:1.35;font-weight:500;color:var(--sp-ink)}
+.shop-page__product .price{margin-top:auto;padding-top:6px}
+.shop-page__product .price__old{min-height:0;margin:0 0 2px;font-size:12px}
+.shop-page__product .price__new{font-size:14px;font-weight:800;color:var(--sp-ink)}
+.shop-page__product-image{display:block;width:100%;height:170px;overflow:hidden;background:var(--sp-bg)}
+.shop-page__product-image img{display:block;width:100%;height:100%;object-fit:contain;position:relative;z-index:1}
+.shop-page__product-image:before,.shop-page__product-image:after{display:none!important;content:none!important}
+
+/* Plain wrapping grid: used by the catalog/brand filter listing (routes.php catalogRoute). */
+@media(max-width:1199px){.shop-page__product{flex:0 0 calc((100% - 60px)/4)}}
+@media(max-width:767px){.shop-page__product{flex:0 0 calc((100% - 20px)/2)}}
+@media(max-width:479px){.shop-page__product{flex:0 0 100%}}
+
+/* Horizontal carousel: shop detail page only ("Товары магазина"), a real Swiper slider (JS drives
+   slide widths via slidesPerView, see shop-page.js) — the .shop-page__product flex-basis rules
+   above are for the plain wrapping grid (routes.php catalogRoute) only, not this context. */
+.shop-page__products-viewport{width:100%;padding:4px 2px 14px}
+.shop-page__products-viewport .shop-page__products{flex-wrap:nowrap;gap:0;align-items:stretch}
+.shop-page__products-viewport .swiper-slide{display:flex;height:auto}
+.shop-page__products-viewport .shop-page__product{width:100%;flex:1 1 auto}
+@media(max-width:700px){.shop-page__products-viewport .shop-page__product-image{height:190px}}
+
+/* ---------- catalog-section links ("Товары магазина в каталоге") ---------- */
+.shop-page__links{list-style:none;margin:0 0 14px;padding:0}
+.shop-page__links--catalog{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.shop-page__links--catalog li a{display:flex;align-items:center;gap:11px;border:1px solid var(--sp-line);border-left:3px solid var(--sp-blue);border-radius:3px;padding:9px 13px;background:#fff;transition:.2s}
+.shop-page__links--catalog li a:hover{border-color:var(--sp-blue);text-decoration:none}
+.shop-page__links--catalog img{width:44px;height:44px;flex:none;object-fit:contain;border-radius:3px;background:var(--sp-bg)}
+.shop-page__links--catalog span{font-size:13.5px;font-weight:600;color:var(--sp-blue)}
+.shop-page__all-goods{display:inline-block;font-size:14px;font-weight:700;color:var(--sp-blue)}
+.shop-page__all-goods:hover{text-decoration:underline}
+
+/* ---------- promos ("Акции салона") ---------- */
+.shop-page__links--sales{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.shop-page__links--sales li a{display:flex;align-items:center;gap:12px;border:1px solid var(--sp-line);border-left:3px solid var(--sp-lime);border-radius:3px;padding:10px 14px;background:#fff;transition:.2s}
+.shop-page__links--sales li a:hover{border-color:var(--sp-lime);text-decoration:none}
+.shop-page__links--sales img{width:64px;height:46px;flex:none;object-fit:cover;border-radius:3px;background:var(--sp-bg)}
+.shop-page__links--sales small{display:block;font-size:11px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--sp-ink-2);margin-bottom:3px}
+.shop-page__links--sales strong{display:block;font-size:13.5px;font-weight:600;color:var(--sp-ink)}
+
+/* ---------- neighbors ---------- */
+.shop-page__neighbors{list-style:none;display:flex;gap:14px;overflow-x:auto;margin:0;padding:2px 2px 6px;scroll-snap-type:x mandatory;scrollbar-width:thin}
+.shop-page__neighbors li{flex:0 0 200px;scroll-snap-align:start}
+.shop-page__neighbors li a{display:flex;flex-direction:column;gap:3px;border:1px solid var(--sp-line);border-radius:var(--sp-radius);padding:12px;background:#fff;height:100%;transition:.2s}
+.shop-page__neighbors li a:hover{border-color:var(--sp-blue);text-decoration:none}
+.shop-page__neighbors img{width:100%;height:110px;object-fit:contain;background:var(--sp-bg);border-radius:3px;padding:8px;margin-bottom:6px}
+.shop-page__neighbors strong{font-size:13.5px;font-weight:700;color:var(--sp-ink)}
+.shop-page__neighbors span{font-size:11.5px;color:var(--sp-ink-2)}
+
+/* ---------- pagination (shop list "Load more" fallback + catalog filter route) ---------- */
+.shops-pagination{display:flex;flex-wrap:wrap;gap:8px;margin:24px 0}
+.shops-pagination a,.shops-pagination span{display:inline-flex;align-items:center;justify-content:center;min-width:32px;height:32px;padding:0 8px;border:1px solid var(--sp-line);border-radius:4px;color:var(--sp-ink)}
+.shops-pagination span{background:var(--sp-bg)}
+.shops-pagination a:hover{border-color:var(--sp-blue);color:var(--sp-blue);text-decoration:none}
+.shop-pages{display:flex;gap:8px;margin:24px 0}
+.shop-pages a,.shop-pages span{display:inline-flex;align-items:center;justify-content:center;min-width:32px;height:32px;padding:0 8px;border:1px solid var(--sp-line);border-radius:4px;color:var(--sp-ink)}
+.shop-pages span{background:var(--sp-bg)}
+.shop-pages a:hover{border-color:var(--sp-blue);color:var(--sp-blue);text-decoration:none}
+
+/* ---------- misc kept selectors ---------- */
+.karta-shops__list{list-style:none;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px 24px;margin:16px 0;padding:0}
+.karta-shops__list li{display:flex;justify-content:space-between;gap:12px}
+.karta-shops__list span{color:var(--sp-ink-2);font-size:.9em}
+.catalog-intro{margin:20px 0;max-width:100%}
+
+/* ---------- responsive ---------- */
+@media(max-width:1199px){
+  .shop-page__photos{flex:1 1 100%;width:100%;height:200px}
+}
+@media(max-width:900px){
+  .shop-page__links--catalog,.shop-page__links--sales{grid-template-columns:1fr}
+}
+@media(max-width:767px){
+  .shop-page__logo{flex-basis:150px;width:150px;height:105px;padding:10px}
+  .shop-page__contacts{flex-basis:200px;min-width:200px}
+  .shop-page__meta{gap:0 20px}
+  .karta-shops__list{grid-template-columns:1fr}
+}
+@media(max-width:575px){
+  .shop-page__card{flex-direction:column}
+  .shop-page__logo{flex-basis:130px;width:130px;height:96px}
+  .shop-page__contacts{flex-basis:auto;width:100%}
+  .shop-page__photos{height:180px}
+  .shop-page__neighbors li{flex-basis:78%}
+}

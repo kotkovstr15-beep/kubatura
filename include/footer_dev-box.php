@@ -1,0 +1,1 @@
+<a href="https://kotstudio.ru" class="dev-box__img" target="_blank" rel="nofollow"><img src="/upload/kot-new.png" alt="Логотип КОТ студия"></a>

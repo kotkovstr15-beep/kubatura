@@ -1,0 +1,1761 @@
+@import "bourbon"
+
+/*==========  Desktop First Method  ==========*/
+
+@media only screen and (max-width : 1699px)
+	.container
+		width: 1170px
+
+	body
+		line-height: 1.5
+		font-size: 16px
+
+	h1, .h1
+		line-height: 1.3
+		font-size: 50px
+	h2, .h2, h3, .h3
+		line-height: 1.3
+		font-size: 22px
+	h4, .h4
+		line-height: 1.5
+		font-size: 18px
+	h5, .h5
+		line-height: 1.5
+		font-size: 16px
+	h6, .h6
+		font-size: 14px
+
+	.s-margin
+		margin: 80px 0
+	.s-padding
+		padding: 80px 0
+	.s-inner
+		padding-top: 60px
+		margin-bottom: 80px
+		&_bg
+			padding-bottom: 250px
+			background-size: 295px auto
+
+	.btn
+		min-width: 300px
+		font-size: 14px
+	.btn,
+	.btn.btn_big
+		padding: 16px 30px
+		border-radius: 25px
+		&.btn_bd
+			padding: 14px 28px
+	.btn.btn_medium
+		padding: 12px 30px
+		min-width: 200px
+		&.btn_bd
+			padding: 10px 28px
+	.btn.btn_toggle
+		padding: 11px 38px
+		line-height: 1.4
+		font-size: 16px
+
+	.logo
+		max-width: 165px
+	.logo img
+		max-height: 45px
+
+	.breadcrumbs
+		margin-bottom: 20px
+
+	.filter
+		margin-bottom: 20px
+	.filter__top-grid
+		margin-left: -15px
+		margin-right: -15px
+	.filter__top-grid>*
+		margin-left: 15px
+		margin-right: 15px
+
+	.filter-cats__item
+		padding-top: 13px
+		padding-bottom: 13px
+		font-size: 16px
+		line-height: 1.4
+
+	.title
+		margin-bottom: 40px
+	.title__head
+		margin-bottom: 28px
+		font-size: 42px
+
+	.tabs__item
+		min-width: 240px
+	.tabs__item_medium
+		min-width: 160px
+
+	.title_center .title__main
+		margin-left: 100px
+
+	.menu__grid
+		background: url('../img/bg-elements/bottom-right.png') no-repeat 100% 100% / 295px auto
+	.menu__left
+		flex: 0 0 60px
+		max-width: 60px
+		font-size: 26px
+	.menu__list,
+	.menu__info
+		padding: 40px
+	.menu__list li
+		padding-bottom: 20px
+		margin-bottom: 20px
+	.menu__link
+		font-size: 22px
+
+	.menu__list-2 .menu__link
+		font-size: 14px
+	.menu__list-2 li
+		margin-bottom: 1rem
+
+	.menu__contact
+		margin-top: 45px
+	.menu__contact .social
+		margin-top: 17px
+
+	.social-item
+		width: 50px
+		height: 50px
+		line-height: 50px
+		font-size: 17px
+
+	.header__grid
+		margin-right: -30px
+	.header__grid>*
+		margin-right: 30px
+
+	.header__clock
+		padding-left: 35px
+		font-size: 14px
+	.header__clock .ic
+		margin-top: -11px
+		font-size: 22px
+
+	.header__icon
+		padding: 22px 15px
+		font-size: 22px
+	.header__icon>span
+		padding: 8px 30px
+		font-size: 14px
+
+	.sandwich__text
+		font-size: 14px
+	.sandwich__main
+		width: 24px
+		height: 14px
+		span
+			height: 2px
+	.sandwich.active .sandwich__main span:nth-child(1)
+		margin-top: 6px
+	.sandwich.active .sandwich__main span:nth-child(3)
+		margin-top: -2px
+
+	.banner__slider
+		flex: 0 0 70%
+		max-width: 70%
+	.banner__thumbs
+		left: 70%
+
+	.banner-item
+		padding-top: 90px
+
+	.banner-item__wrap
+		max-width: 500px
+
+	.banner-item__content
+		max-width: 250px
+	.banner-item__content .btn
+		margin-top: 15px
+		min-width: 0
+		width: 100%
+
+	.shops__col
+		flex: 0 0 33.33%
+		max-width: 33.33%
+
+	.swiper-button-next,
+	.swiper-button-prev
+		width: 60px
+		height: 60px
+		.ic
+			font-size: 14px
+			height: 14px
+	.swiper-button-prev
+		left: 15px
+	.swiper-button-next
+		right: 15px
+
+	.swiper-nav
+		.swiper-button-next,
+		.swiper-button-prev
+			.ic
+				font-size: 16px
+		.swiper-button-prev
+			margin-right: 20px
+
+	.news__slider
+		.swiper-slide
+			width: 33.33%
+			.news-item__head
+				font-size: 24px
+		.swiper-slide_big
+			width: 66.66%
+			.news-item__head
+				font-size: 32px
+
+	.instagram
+		background-position: 30% 100%
+	.instagram__left
+		flex: 0 0 35%
+		max-width: 35%
+	.instagram__right
+		flex: 0 0 65%
+		max-width: 65%
+	.instagram__col:last-child
+		display: none
+
+	.about-banner__wrapper
+		padding: 40px
+		min-height: 400px
+
+	.main-about__item
+		padding: 40px
+
+	.post-info
+		flex: 0 0 200px
+		max-width: 200px
+		margin-right: 40px
+
+	.post-title
+		margin-bottom: 30px
+	.post-title__date
+		margin-bottom: .8rem
+
+	.post-img
+		padding-left: 40px
+	.post-img__wrap
+		width: 400px
+
+	.post-gallery
+		width: 400px
+	.post-gallery__item
+		height: 400px
+
+	.post-gallery__nav
+		padding: 15px 20px 0 0
+
+	.post-action
+		margin-top: 30px
+	.post-action__grid
+		margin: 0 -10px -20px
+		&>*
+			margin: 0 10px 20px
+		.btn
+			min-width: 250px
+
+	.product-info
+		flex: 0 0 31%
+		max-width: 31%
+	.product-gallery
+		flex: 0 0 69%
+		max-width: 69%
+		padding-right: 80px
+	.product-gallery__img
+		top: 80px
+		left: 80px
+		right: 80px
+		bottom: 80px
+	.product-thumbs
+		padding: 30px 0
+		width: 80px
+	.product-thumbs__img
+		top: 15px
+		left: 15px
+		right: 15px
+		bottom: 15px
+
+	.product-info__first,
+	.product-info__main,
+	.product-info__descr-wrap
+		padding: 30px
+
+	.cat-menu-dropdown
+		padding: 30px 0
+	.cat-menu-dropdown__list
+		font-size: 14px
+
+	.categories__col
+		flex: 0 0 50%
+		max-width: 50%
+
+	.cat-menu-main__list
+		margin: 0
+		li
+			margin: 0
+
+	.filter-select.jq-selectbox .jq-selectbox__select,
+	.filter-item__toggle
+		padding-left: 30px
+		padding-right: 60px
+	.filter-select.jq-selectbox .jq-selectbox__select:after,
+	.filter-item__toggle:after
+		right: 30px
+	.filter-select.jq-selectbox li
+		padding-left: 30px
+		padding-right: 30px
+	.filter-select.jq-selectbox .jq-selectbox__search
+		margin-left: 30px
+		margin-right: 30px
+
+	.filter-item__options
+		padding: 0 30px
+
+	.filter-price
+		padding: 0 20px
+	.filter-price__sep
+		flex: 0
+		margin: 0 2px
+
+	.jq-selectbox__search input
+		padding-left: 35px
+
+	.similar__col
+		flex: 0 0 33.33%
+		max-width: 33.33%
+
+	.cab-line__item
+		margin-right: 30px
+
+	.main-form__col
+		flex: 0 0 100%
+		max-width: 100%
+		padding: 0
+
+	.main-form__col_edit-address .form-item__head
+		flex: 0 0 200px
+		max-width: 200px
+
+	.form-item__fields
+		.form-item__field+.form-item__field
+			margin-left: 10px
+
+	.main-form__col_specs
+		flex: 1 0 0
+		max-width: 100%
+	.main-form__col_specs:nth-child(1)
+		margin-right: 100px
+
+	.cart-item
+		padding-right: 30px
+	.cart-item__img,
+	.cart-item__info
+		margin-right: 30px
+	.cart-item__price
+		flex: 0 0 190px
+		max-width: 190px
+
+	.cart-specs
+		margin: 20px -10px 0
+		li
+			margin: 10px 10px 0
+
+	.cart-box__head
+		margin-right: 30px
+	.cart-box__head p:nth-child(2)
+		flex: 0 0 270px
+		max-width: 270px
+
+
+@media only screen and (max-width : 1199px)
+	.container
+		width: 768px
+
+	h1, .h1
+		font-size: 42px
+	h4, .h4
+		font-size: 16px
+	h5, .h5
+		font-size: 14px
+	h6, .h6
+		font-size: 12px
+
+	.s-margin
+		margin: 60px 0
+	.s-padding
+		padding: 60px 0
+	.s-inner
+		padding-top: 60px
+		margin-bottom: 60px
+
+	.container__full
+		width: 100% !important
+
+	.shops__grid,
+	.main-about__grid,
+	.news-inn__grid
+		margin: 0 -5px -10px
+	.shops__col,
+	.main-about__col,
+	.news-inn__col
+		padding: 0 5px 10px
+
+	.page-inner #wrapper__center
+		background-size: 225px auto
+
+	.menu__grid
+		background: url('../img/bg-elements/bottom-right.png') no-repeat 102% 115% / 295px auto
+
+	.similar_home
+		background: url('../img/bg-elements/bottom-right.png') no-repeat 100% 100% / 295px auto, url('../img/bg-elements/top-left.png') no-repeat 10px 10px / 55px auto, $gradient
+
+	.title__main
+		margin: 0
+	.tabs
+		overflow: auto
+	.tabs__grid
+		flex-wrap: nowrap
+		margin: 0
+	.tabs__item
+		min-width: 226px
+		margin: 0 25px 0 0
+		&:last-child
+			margin-right: 0
+		&_medium,
+		&_small
+			min-width: 160px
+
+	.title__nav
+		display: none
+
+	.title__head-count
+		margin-left: .2em
+		padding: .4em .9em
+		font-size: 18px
+
+	.title_center .title__main
+		margin: 0
+
+	.menu__list
+		flex: 0 0 46%
+		max-width: 46%
+
+	.header__cart
+		display: none
+
+	.banner,
+	.banner__wrap
+		display: block
+		min-height: 0
+	.banner__slider
+		flex: 0 0 100%
+		max-width: 100%
+		.swiper-button-next, .swiper-button-prev
+			display: none
+	.banner__thumbs
+		display: none
+	.banner__pagination
+		display: block
+
+	.banner-item
+		padding: 65px 0
+	.banner-item__wrap
+		margin-left: 40px
+		max-width: 400px
+
+	.shop-item__img
+		height: 135px
+	.shop-item__place
+		margin-top: -12px
+	.shop-item__place-wrap
+		padding: 6px 20px
+		min-width: 140px
+		border-radius: 12px
+		font-size: 8px
+	.shop-item__place-wrap span
+		margin-right: 8px
+		padding-right: 12px
+	.shop-item__place-wrap span:before
+		height: 8px
+		margin-top: -5px
+
+	.shop-item__action
+		padding: 15px 20px 18px
+	.shop-item__head
+		margin-right: 30px
+		font-size: 12px
+	.shop-item__arrow
+		font-size: 8px
+	.shop-item__arrow:before
+		left: -20px
+		width: 28px
+		height: 28px
+		margin-top: -14px
+
+	.similar_home
+		padding: 60px 0
+	.similar__slider
+		margin: -15px -5px
+	.similar__slider .swiper-slide
+		padding: 15px 5px
+
+	.similar-item__content
+		padding: 15px 15px 30px
+	.similar-item:hover
+		transform: none
+		.labels
+			transform: none
+
+	.news__slider
+		margin: 0 -5px
+	.news__slider .swiper-slide
+		padding: 0 5px
+	.news__slider .news-item
+		margin-bottom: 10px
+
+	.news__slider
+		.swiper-slide
+			width: 50%
+			.news-item__head
+				font-size: 18px
+			&_big
+				width: 60%
+				.news-item:before
+					padding: 0
+					height: 570px
+			&_small
+				width: 40%
+				.news-item:before
+					padding: 0
+					height: 280px
+
+	.news-item__head
+		font-size: 18px
+
+	.news-inn__col
+		flex: 0 0 50%
+		max-width: 50%
+
+	.instagram__wrap
+		display: block
+	.instagram__left
+		display: flex
+		align-items: center
+		max-width: 100%
+		padding: 0
+		margin: 0 0 40px
+	.instagram__link
+		margin: 0 auto 0 0
+	.instagram__subs
+		display: none
+	.instagram__tags
+		display: none
+	.instagram__btn
+		margin: 0 0 0 20px
+	.instagram__right
+		max-width: 100%
+		padding: 0
+
+	.instagram
+		background-position: 20% 100%
+		background-size: 220px auto
+	.instagram__grid
+		margin: 0 -5px
+	.instagram__col
+		padding: 0 5px
+
+	.about-banner
+		margin-bottom: 20px
+
+	.main-about__col
+		flex: 0 0 100%
+		max-width: 100%
+	.main-about__head
+		margin-bottom: 1rem
+
+	.footer
+		background: #f8f8f8
+		.phone__link
+			font-size: 22px
+
+	.dev-box
+		display: inline-block
+		&__descr
+			display: none
+
+	.post
+		padding-top: 0 !important
+		.breadcrumbs
+			display: none
+
+	.post-grid
+		display: block
+	.post-img
+		max-width: 100%
+		padding: 0
+		&+.post-content
+			margin-top: 40px
+	.post-img__wrap
+		width: auto
+		margin: 0 -20px
+	.post-img__wrap:before
+		padding-bottom: 64%
+
+	.post-info
+		position: relative
+		z-index: 5
+		margin: -100px 0 40px
+		display: flex
+		align-items: flex-end
+		max-width: 100%
+		text-align: left
+		&__img
+			flex: 0 0 220px
+			max-width: 220px
+			margin: 0 20px 0 0
+		&__main
+			flex: 1 0 0
+			max-width: 100%
+		&__head
+			font-size: 18px
+		.post-place
+			margin-top: 20px
+		.btn
+			width: auto
+		.social
+			margin: 0 0 0 20px
+
+	.post-gallery
+		width: auto
+		margin: 0 -20px
+	.post-gallery__item
+		height: auto
+		&:before
+			content: ''
+			display: block
+			width: 100%
+			padding-bottom: 64%
+
+	.post-grid_shop,
+	.post-grid_cab
+		.post-title
+			display: none
+		.post-info
+			margin-bottom: 20px
+		.post-info__main
+			display: block
+
+	.shop-info
+		display: none
+
+	.product .breadcrumbs
+		margin-bottom: 50px
+
+	.product-box
+		display: block
+	.product-gallery
+		margin: 0
+		padding: 0
+		max-width: 100%
+		border: none
+		border-bottom: 1px solid #ebebeb
+	.product-gallery .swiper-pagination
+		display: block
+	.product-gallery__item
+		min-height: 535px
+	.product-thumbs
+		display: none
+
+	.product-info
+		max-width: 100%
+	.product-info__first,
+	.product-info__second
+		padding: 30px 40px
+
+	.product-info__descr-wrap,
+	.product-info__main
+		padding: 0
+
+	.product-info__second
+		flex-direction: row
+		padding-bottom: 40px
+
+	.product-info__main,
+	.product-info__descr
+		flex: 0 0 50%
+		max-width: 50%
+
+	.product-info__main
+		padding-right: 40px
+	.product-info__descr
+		border: none
+		min-height: 0
+		padding-left: 20px
+		&:hover
+			.product-info__descr-wrap
+				background: none
+				box-shadow: none
+	.product-info__descr-wrap
+		position: static
+		height: auto
+	.product-info__descr-wrap:before
+		display: none
+
+	.cart-btn
+		padding-right: 32px
+		font-size: 14px
+	.cart-btn__icon
+		margin-top: -11px
+	.cart-btn__icon .ic
+		font-size: 20px
+	.cart-btn__count
+		width: 2em
+		height: 2em
+		line-height: 2em
+		font-size: 8px
+
+	.cat-menu
+		border: none
+
+	.cat-menu-mob
+		display: block
+		border-bottom: 1px solid transparent
+		transition: border-color .3s
+		&.active
+			border-color: #E2E2E2
+
+	.cat-menu__wrapper
+		display: none
+		position: fixed
+		z-index: 9
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		background: #F8F8F8
+		overflow: auto
+		-webkit-overflow-scrolling: touch
+	.cat-menu__wrap
+		position: relative
+		min-height: 100%
+		overflow: hidden
+	.cat-menu__grid
+		display: flex
+		transition: .3s
+		&.active
+			transform: translateX(-100%)
+
+	.cat-menu-main,
+	.cat-menu-dropdowns
+		flex: 0 0 100%
+		max-width: 100%
+
+	.cat-menu-main
+		background: none
+	.cat-menu-main__list
+		display: block
+		padding: 25px 0
+		margin: 0
+		text-align: left
+	.cat-menu-main__list a
+		padding: 9px 0 9px 35px
+		&:hover
+			color: $c-1
+
+	.cat-menu-dropdowns
+		position: relative
+		top: auto
+	.cat-menu-dropdown
+		padding: 35px 0
+		background: none
+		box-shadow: none
+	.cat-menu-dropdown__list
+		padding: 0 0 0 35px
+		column-count: 2
+
+	.cat-menu-dropdown__back
+		display: block
+
+	.category
+		padding-left: 20px
+	.category:before
+		right: 35px
+	.category__main
+		flex: 0 0 155px
+		max-width: 155px
+	.category__head
+		letter-spacing: 0
+
+	.category__specs
+		td, th
+			&:nth-child(n+2)
+				display: none
+
+	.category__img
+		height: 190px
+
+	.filter-choosed
+		display: none
+
+	.similar__grid
+		margin: 0 -5px -10px
+	.similar__col
+		padding: 0 5px 10px
+
+	.filter-main
+		padding-top: 0
+
+	.filter-main__col
+		flex: 0 0 100%
+		max-width: 100%
+
+	.filter-select.jq-selectbox .jq-selectbox__select,
+	.filter-item__toggle
+		padding-left: 40px
+		padding-right: 210px
+		font-size: 16px
+	.filter-select.jq-selectbox .jq-selectbox__select:after,
+	.filter-item__toggle:after
+		right: 40px
+		font-size: 12px
+
+	.filter-price
+		padding: 10px 40px
+		max-width: 360px
+	.filter-price__sep
+		flex: 0 0 10px
+		margin: 0 10px
+
+	.filter-select.jq-selectbox li
+		padding-left: 40px
+		padding-right: 40px
+
+	.filter-select.jq-selectbox .jq-selectbox__search
+		margin-left: 40px
+		margin-right: 40px
+
+	.filter-item__options
+		padding: 5px 40px
+
+	.filter-select.jq-selectbox .jq-selectbox__dropdown
+		position: static
+		box-shadow: none
+		ul
+			max-height: 310px !important
+	.filter-item__dropdown
+		position: static
+		box-shadow: none
+		max-height: 310px !important
+
+	.filter-main__action
+		display: block
+
+	.pagination
+		margin-top: 50px
+
+	.cab-line
+		margin-bottom: 50px
+		font-size: 14px
+	.cab-line__grid
+		padding: 0 20px
+	.cab-line__item
+		margin-right: 20px
+		padding: 20px 0
+		box-shadow: inset 0 -2px 0 transparent
+		&.active
+			box-shadow: inset 0 -2px 0 $c-2
+	.cab-line__btn
+		padding: 15px 25px
+
+	.similar-item__action
+		display: block
+		position: relative
+		top: 0
+		padding: 0 20px 20px
+		&-grid
+			flex-wrap: wrap
+
+	.main-form__grid
+		margin-bottom: -50px
+	.main-form__col
+		margin-bottom: 50px
+
+	.form-item
+		margin-bottom: 20px
+
+	.form-item__fields
+		display: block
+	.form-item__fields .form-item__field+.form-item__field
+		margin: 10px 0 0
+
+	.main-form__col .main-form__grid
+		margin-bottom: -20px
+	.main-form__col .main-form__grid .main-form__col
+		margin-bottom: 20px
+
+	.main-form__col_specs
+		flex: 0 0 100%
+		max-width: 100%
+
+	.cart-box__head
+		display: none
+
+	.cart-item
+		align-items: flex-start
+		flex-wrap: wrap
+		padding-bottom: 30px
+	.cart-item__img
+		align-self: flex-start
+		flex: 0 0 185px
+		max-width: 185px
+		min-height: 0
+		&:before
+			content: ''
+			display: block
+			width: 100%
+			padding-bottom: 70%
+	.cart-item__price
+		flex: 0 1 auto
+		max-width: 100%
+		text-align: right
+	.cart-item__del
+		margin: -15px 0 0 auto
+
+	.cart-item__price+.cart-item__w-100
+		display: block
+
+	.cart-box__action
+		margin-top: 30px
+
+	.s-error__content
+		font-size: 16px
+		h2, .h2
+			font-size: 32px
+	.s-error__img
+		margin-bottom: 50px
+		max-width: 680px
+	.s-error__content .btn
+		min-width: 300px
+		margin-top: 25px
+
+
+@media only screen and (max-width : 767px)
+	.container
+		width: 100%
+
+	h1, .h1
+		font-size: 38px
+
+	.btn.btn_toggle
+		padding-left: 28px
+		padding-right: 28px
+		font-size: 14px
+
+	.s-inner_bg
+		padding-bottom: 160px
+		background-size: auto 140px
+
+	.menu__grid
+		display: block
+		background: none
+		border-top: 2px solid #E6E6E6
+	.menu__mob
+		display: block
+	.menu__pc
+		display: none
+	.menu__left
+		max-width: 100%
+		line-height: 60px
+		font-size: 18px
+		text-align: center
+	.menu__left>span
+		position: static
+		transform: none
+
+	.menu__list
+		padding: 0 20px
+		max-width: 100%
+	.menu__list li
+		padding: 0
+		margin: 0
+	.menu__link
+		display: block
+		padding: 17px 0
+		font-size: 1em
+
+	.menu__info
+		padding: 30px 20px
+		text-align: center
+	.menu__list-2
+		li
+			margin-bottom: .5rem
+		.menu__link
+			display: inline-block
+			padding: 0
+			font-size: 85%
+
+	.menu__contact
+		margin-top: 30px
+
+	.similar_home
+		background: url('../img/bg-elements/bottom-right.png') no-repeat 100% 100% / 190px auto, url('../img/bg-elements/top-left.png') no-repeat 10px 10px / 55px auto, $gradient
+
+	.breadcrumbs
+		font-size: 12px
+
+	.title
+		margin-bottom: 30px
+	.title__head
+		font-size: 26px
+	.title__head-count
+		display: none
+	.title__btn
+		display: none
+
+	.filter
+		margin-bottom: 10px
+	.filter__top,
+	.filter__wrap
+		padding-bottom: 20px
+	.filter__top-grid .filter-selected
+		flex: 0 1 auto
+
+	.filter-cats__item
+		padding: 9px 20px
+
+	.filter-cats__item,
+	.filter-selected__item
+		font-size: 14px
+
+	.tabs
+		margin-left: -20px
+		margin-right: -20px
+	.tabs__grid
+		padding: 0 20px
+	.tabs__item
+		padding: 8px 10px 0 0
+		margin-right: 20px
+		min-width: 170px
+		font-size: 12px
+	.tabs__item_medium
+		min-width: 133px
+	.tabs__item_small
+		min-width: 60px
+
+	.action-box
+		margin-top: 30px
+
+	.banner-item__wrap
+		margin-left: 0
+		max-width: 335px
+
+	.header__grid
+		margin-right: -15px
+	.header__grid>*
+		margin-right: 15px
+	.header__logo
+		padding-right: 15px
+		margin-right: auto
+	.header__clock
+		display: none
+
+	.shops__col
+		flex: 0 0 50%
+		max-width: 50%
+
+	.similar__slider
+		margin-left: -25px
+		margin-right: -25px
+		padding-left: 20px
+		padding-right: 20px
+		.swiper-slide
+			width: 245px
+
+	.news__slider
+		margin-left: -25px
+		margin-right: -25px
+		padding-left: 20px
+		padding-right: 20px
+		.swiper-slide
+			width: 245px
+			.news-item:before
+				padding: 0
+				height: 280px
+		.swiper-slide_small
+			display: flex
+			width: auto
+			.news-item
+				width: 235px
+				margin: 0 10px 0 0
+				&:last-child
+					margin-right: 0
+
+	.news-item__date
+		margin-bottom: .5rem
+		opacity: .5
+	.news-item__content
+		padding: 0 30px
+	.news-item__label
+		padding: 7px 15px
+		min-width: 120px
+
+	.instagram
+		padding: 30px 0
+		background: url('../img/bg-elements/inst-bg.png') no-repeat -30px 100% / 150px auto
+	.instagram__left
+		margin-bottom: 30px
+	.instagram__link
+		font-size: 18px
+
+	.about-banner__wrapper
+		padding: 30px
+		min-height: 0
+
+	.main-about__item
+		padding: 30px
+
+	.footer__grid
+		margin-bottom: 0
+	.footer__col
+		&:nth-child(n)
+			flex: 0 0 100%
+			max-width: 100%
+			text-align: center
+		&:last-child
+			margin-bottom: 0
+
+	.footer__bottom
+		margin-top: 30px
+		.footer__col
+			margin-bottom: 15px
+			&:last-child
+				margin-top: 5px
+				margin-bottom: 0
+
+	.post-info
+		flex-wrap: wrap
+		margin: -80px 0 30px
+		.social
+			margin-left: auto
+		.post-place
+			margin-top: 15px
+	.post-info__img
+		flex: 0 0 160px
+		max-width: 160px
+	.post-info__main
+		order: 1
+		flex: 0 0 100%
+		max-width: 100%
+		margin: 20px 0 0
+
+	.post-action__grid .btn
+		min-width: 220px
+
+	.product-gallery .labels
+		left: 5px
+	.product-gallery__item
+		min-height: 0
+		&:before
+			content: ''
+			display: block
+			width: 100%
+			padding-bottom: 100%
+	.product-gallery__img
+		top: 50px
+		left: 50px
+		right: 50px
+		bottom: 50px
+
+	.product-info__second
+		display: block
+
+	.product-info__descr, .product-info__main
+		max-width: 100%
+		padding: 0
+
+	.product-info__descr
+		margin-top: 40px
+
+	.product-bottom
+		margin-top: 20px
+	.product-bottom__btn
+		padding: 13px 30px
+		font-size: 14px
+
+	.categories__col
+		flex: 0 0 100%
+		max-width: 100%
+
+	.category__main
+		flex: 1 0 0
+		max-width: 100%
+
+	.category__specs
+		td, th
+			&:nth-child(n+2)
+				display: table-cell
+
+	.filter-item__toggle,
+	.filter-select.jq-selectbox .jq-selectbox__select
+		padding-left: 20px
+		padding-right: 130px
+		height: 60px
+		font-size: 12px
+		&:after
+			right: 20px
+			font-size: 8px
+
+	.filter-main__reset
+		right: 45px
+		top: 30px
+		margin-top: -5px
+		padding-left: 15px
+		font-size: 10px
+
+	.filter-select.jq-selectbox li,
+	.filter-item__options,
+	.filter-price
+		padding-left: 20px
+		padding-right: 20px
+
+	.filter-select.jq-selectbox .jq-selectbox__search
+		margin-left: 20px
+		margin-right: 20px
+
+	.filter-price
+		max-width: 320px
+
+	.filter-main__action .btn.btn_2
+		padding: 9px 30px
+		font-size: 12px
+
+	.filter-main__reset-all
+		font-size: 12px
+
+	.filter-main__action
+		margin: 20px 0 10px
+
+	.similar__col
+		flex: 0 0 50%
+		max-width: 50%
+
+	.similar__grid
+		.similar-item
+			.price__old
+				font-size: 12px
+			.price__new
+				font-size: 22px
+
+	.pagination
+		margin-top: 40px
+	.pagination__wrap
+		padding: 0 45px
+	.pagination__item
+		width: 36px
+		height: 36px
+		line-height: 32px
+		font-size: 14px
+
+	.cab-line
+		display: block
+		margin-bottom: 40px
+		&__grid
+			margin-bottom: 20px
+		&__item
+			flex: 1 1 auto
+			padding: 20px 0
+			margin-right: 20px
+			font-size: 12px
+
+	.form-item
+		display: block
+	.form-item__head
+		padding: 0
+		margin: 0 0 12px
+		max-width: 100%
+
+	.form-images__grid
+		margin: 0 -2px -15px
+	.form-images__grid>*
+		flex: 0 0 120px
+		max-width: 120px
+		margin: 0 2px 15px
+	.form-images__img
+		height: 90px
+		&-descr
+			margin-top: 5px
+	.form-images__close
+		width: 20px
+		height: 20px
+		line-height: 20px
+		font-size: 6px
+
+	.form-images__item_add .form-images__img
+		background-size: 45px auto !important
+
+	.form-images__item_add .form-images__img span
+		width: 21px
+		height: 21px
+
+	.main-form .btn
+		min-width: 0
+		max-width: 100%
+	.main-form__title
+		margin-bottom: 25px
+	.main-form__grid
+		margin-bottom: -40px
+	.main-form__col
+		margin-bottom: 40px
+
+	.cart-item
+		padding-bottom: 0
+
+	.cart-item__img
+		flex: 0 0 165px
+		max-width: 165px
+
+	.cart-item__info
+		margin-right: 0
+		padding-bottom: 0
+	.cart-item__price
+		align-self: center
+		flex: 1 0 0
+		max-width: 100%
+		margin: 0 0 0 30px
+		text-align: left
+
+	.cart-item__del
+		align-self: center
+		margin: 0 0 0 30px
+
+	.cart-item__info+.cart-item__w-100
+		display: block
+	.cart-item__price+.cart-item__w-100
+		display: none
+
+	.cart-box__action
+		display: block
+		margin: 20px 0 0
+		text-align: center
+	.cart-box__action-col
+		margin: 0 0 40px
+
+	.cart-box__action-btns
+		display: block
+		margin: 0 0 -10px
+	.cart-box__action-btns .btn
+		margin: 0 0 10px
+
+	.s-error
+		padding-top: 80px !important
+		margin-bottom: 80px !important
+	.s-error__content
+		padding: 0
+		font-size: 14px
+	.s-error__content .h2,
+	.s-error__content h2
+		font-size: 22px
+
+
+@media only screen and (max-width : 575px)
+
+	.news-inn__col
+		flex: 0 0 100%
+		max-width: 100%
+
+	.cat-menu-dropdown__list
+		column-count: 1
+
+
+@media only screen and (max-width : 479px)
+	body
+		font-size: 14px
+
+	h1, .h1
+		font-size: 26px
+	h2, .h2
+		font-size: 18px
+	h3, .h3
+		font-size: 16px
+	h4, .h4
+		font-size: 14px
+	h5, .h5
+		font-size: 14px
+	h6, .h6
+		font-size: 12px
+
+	.s-margin
+		margin: 50px 0
+	.s-padding
+		padding: 50px 0
+	.s-inner
+		padding-top: 30px
+		margin-bottom: 50px
+
+	.page-inner #wrapper__center
+		background: none
+
+	.content
+		font-size: 12px
+
+	.btn
+		min-width: 0
+	.btn.btn_toggle
+		padding: 7px 28px
+		font-size: 12px
+	.btn.btn_toggle .ic
+		margin: 0 .5em 0 0
+
+	.logo img
+		max-height: 30px
+
+	.tabs__item_medium
+		min-width: 90px
+
+	.filter__top-grid
+		display: block
+	.filter-cats__item, .filter-selected__item
+		font-size: 12px
+
+	.sandwich
+		padding: 10px 0
+	.sandwich__text
+		display: none
+
+	.action-box
+		.btn
+			width: 100%
+
+	.header__icon
+		display: none
+		padding: 16px 5px
+		font-size: 18px
+	.header__icon-pc
+		display: block
+
+	.banner__pagination
+		margin-top: 15px
+	.banner-item
+		padding: 30px 0
+	.banner-item__wrap
+		max-width: 230px
+
+	.shops__col
+		flex: 0 0 100%
+		max-width: 100%
+	.shop-item__head
+		font-size: 14px
+
+	.similar_home
+		padding: 50px 0
+
+	.instagram__left
+		flex-direction: column
+		justify-content: center
+		align-items: center
+	.instagram__link
+		margin: 0 0 20px
+	.instagram__btn
+		margin: 0
+
+	.about-banner
+		margin-left: -20px
+		margin-right: -20px
+	.about-banner__wrapper
+		padding: 20px
+
+	.about-banner__arrow
+		width: 30px
+		height: 30px
+		line-height: 30px
+		font-size: 10px
+
+	.main-about__item
+		padding: 20px
+	.main-about__head
+		margin-bottom: .8rem
+
+	.post-img__wrap,
+	.post-gallery__item
+		&:before
+			padding-bottom: 100%
+
+	.post-info
+		margin-top: -30px
+		.social__wrap
+			margin: 0 -3px -10px
+			.social-item
+				margin: 0 3px 10px
+		.social-item
+			width: 40px
+			height: 40px
+			line-height: 40px
+			font-size: 14px
+	.post-info__img
+		flex: 0 0 100px
+		max-width: 100px
+
+	.post-info__head
+		font-size: 14px
+
+	.post-place
+		font-size: 12px
+
+	.post-info .btn
+		min-width: 165px
+
+	.post-title
+		margin-bottom: 20px
+	.post-title__date
+		margin-bottom: .5rem
+		font-size: 10px
+	.post-title__head
+		font-size: 16px
+
+	.post-img+.post-content
+		margin-top: 30px
+
+	.post-grid_shop,
+	.post-grid_cab
+		.post-info
+			margin-top: -70px
+	.post-grid_shop
+		.phones
+			margin-bottom: 30px
+			font-size: 14px
+	.post-grid_cab
+		.phones
+			padding-left: 30px
+			font-size: 14px
+
+	.social-list li
+		padding-left: 30px
+		margin-bottom: .7rem
+		font-size: 14px
+
+	.post-action__grid,
+	.post-action__grid>*
+		margin-left: 0
+		margin-right: 0
+
+	.post-action__grid
+		display: block
+		text-align: center
+	.post-action__grid .btn
+		width: 100%
+		min-width: 0
+
+	.product .breadcrumbs
+		margin-bottom: 40px
+
+	.product-box
+		margin-left: -20px
+		margin-right: -20px
+
+	.product-info__first,
+	.product-info__second
+		padding: 20px
+
+	.product-info__second
+		padding-bottom: 30px
+
+	.product-info__title,
+	.product-info__list
+		margin-bottom: 20px
+
+	.product-info__descr
+		margin-top: 30px
+
+	.cat-menu-mob__toggle,
+	.cat-menu-dropdown__back
+		padding-left: 30px
+		height: auto
+		min-height: 20px
+		font-size: 12px
+		.ic
+			margin-top: -11px
+			width: 22px
+			height: 22px
+			line-height: 22px
+			font-size: 6px
+
+	.cart-btn
+		padding-right: 28px
+		font-size: 12px
+	.cart-btn__icon
+		margin-top: -10px
+		.ic
+			font-size: 18px
+
+	.cat-menu-main__list
+		padding: 20px 0
+	.cat-menu-main__list a
+		padding: 8px 0 8px 30px
+		font-size: 12px
+
+	.cat-menu-dropdown
+		padding: 30px 0
+	.cat-menu-dropdown__back
+		margin-bottom: 30px
+
+	.cat-menu-dropdown__list
+		padding-left: 30px
+		font-size: 12px
+
+	.categories
+		margin: 0 -10px -10px -20px
+		&__col
+			padding: 0 0 10px
+
+	.category:before
+		right: 30px
+	.category__img
+		flex: 0 0 130px
+		max-width: 130px
+
+	.category__specs
+		td, th
+			&:nth-child(n+2)
+				display: none
+
+	.filter-price
+		max-width: 100%
+
+	.filter-main__action
+		text-align: center
+	.filter-main__action-grid
+		display: block
+		margin-left: 0
+		margin-right: 0
+	.filter-main__action-grid>*
+		margin-left: 0
+		margin-right: 0
+	.filter-main__action-grid
+		.btn
+			width: 100%
+
+	.similar__grid
+		margin-left: -25px
+		margin-right: -25px
+		.similar-item
+			.labels
+				left: 4px
+				right: 4px
+			.label
+				width: 20px
+				height: 20px
+				margin: 0 1px
+			.label__wrap
+				font-size: 8px
+			.price__old
+				font-size: 10px
+			.price__new
+				font-size: 16px
+		.similar-item__content
+			padding-left: 10px
+			padding-right: 10px
+		.similar-item__category
+			font-size: 9px
+		.similar-item__head
+			font-size: 10px
+		.similar-item__action
+			padding-left: 10px
+			padding-right: 10px
+			.btn.btn_small
+				padding-left: 10px
+				padding-right: 10px
+				font-size: 10px
+
+	.pagination__wrap
+		padding: 0 35px
+	.pagination__list
+		margin: -3px
+		li
+			margin: 3px
+	.pagination__next, .pagination__prev
+		font-size: 10px
+
+	.cab-line__grid
+		padding: 0
+	.cab-line__item
+		padding: 15px 10px
+		margin-right: 10px
+
+	.main-form .btn
+		width: 100%
+		padding-left: 20px
+		padding-right: 20px
+
+	.form-item .form-item__field
+		max-width: 100%
+	.form-item_little .form-item__field
+		max-width: 210px
+
+	select[size]
+		height: 270px
+
+	.cart-item
+		display: block
+		position: relative
+		padding: 0 0 30px
+		&__img
+			max-width: 100%
+			margin: 0 0 20px
+		&__info
+			padding: 0 20px
+		&__price
+			margin: 30px 0 0
+			padding: 0 20px
+			margin-right: 70px
+		&__del
+			position: absolute
+			right: 20px
+			bottom: 30px
+			margin: 0
+
+	.cart-specs
+		display: block
+		font-size: 12px
+	.cart-specs li
+		margin-top: 8px
+
+	.cart-box__action-btns .btn
+		width: 100%
+
+	.s-error__content .h2,
+	.s-error__content h2
+		font-size: 18px
+
+	.s-error__content .btn
+		min-width: 0
+
+	.s-error__img
+		margin-bottom: 40px
+
+
+
+/*==========  Mobile First Method  ==========*/
+
+
+@media only screen and (min-width : 480px)
+	/**/
+
+@media only screen and (min-width : 576px)
+	/**/
+
+@media only screen and (min-width : 768px)
+	/**/
+
+@media only screen and (min-width : 1200px)
+
+	.cat-menu__wrapper
+		display: block !important
+
+	.filter-main__reset
+		display: none !important
+
+@media only screen and (min-width : 1700px)
+	/**/

@@ -1,0 +1,138 @@
+.bx-top-nav-container {
+background: #fff;
+margin: 20px 0;
+
+}
+ ul#plan {
+  margin: 0;
+  padding: 0;
+}
+
+ul#plan {
+  display: flex;
+}
+
+ul#plan li {
+  list-style-type: none;
+  flex-basis: auto;
+  flex-grow: 1;
+
+  text-align: center;
+}
+
+ul#plan li:first-child{display: none;}
+
+ul#plan li a {
+
+  text-decoration: none;
+
+  display: block;
+}
+ul#plan li.bx-active a,ul#plan li a:hover{
+  background: #0078BF;
+  color: #fff;
+}
+
+
+.bx-top-nav-container a{
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 24px;
+	color: #333333;
+  	padding: 23px;
+}
+/* 1 lvl*/
+
+.bx-top-nav-container .bx-nav-list-1-lvl {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.bx-top-nav-container .bx-nav-1-lvl {
+	float: left;
+	position: relative;
+}
+
+
+
+.bx-top-nav-container  a {
+
+	display: block;
+}
+
+.bx-top-nav-container .bx-nav-1-lvl.bx-hover {}
+
+.bx-top-nav-container .bx-nav-1-lvl.bx-nav-parent.bx-hover > a,
+.bx-top-nav-container .bx-nav-1-lvl.bx-nav-parent.hover > a {
+	z-index: 250;
+	box-shadow: 0 6px 13px 0 rgba(0, 0, 0, .13)
+}
+
+.bx-top-nav-container .bx-nav-1-lvl.bx-nav-parent.bx-hover > a span,
+.bx-top-nav-container .bx-nav-1-lvl.bx-nav-parent.hover > a span { background: #fff; }
+
+.bx-top-nav-container .bx-nav-parent-arrow { display: none; }
+
+
+
+
+@media (max-width: 1199px) {
+  .bx-top-nav-container a{
+  	font-family: Montserrat;
+  	font-style: normal;
+  	font-weight: 600;
+  	font-size: 14px;
+  	line-height: 22px;
+  	color: #333333;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+}
+
+@media (min-width: 768px) {
+
+}
+
+@media (max-width: 767px) {
+  ul#plan li.bx-active:first-child{display: block;}
+  ul#plan {
+    display: block;
+}
+  ul#plan li {
+    list-style-type: none;
+    flex-basis: auto;
+flex-grow:0;
+    width: 100%;
+    display: none;
+    float: left;
+    text-align: left;
+}
+ul#plan.on li {
+  display: block;
+}
+  ul#plan li {
+  	font-family: Montserrat;
+  	font-style: normal;
+  	font-weight: 600;
+  	font-size: 16px;
+  	line-height: 22px;
+  	color: #333333;
+  }
+  ul#plan li.bx-active{
+    display: block;
+  }
+  ul#plan li.bx-active::before{
+    content: "";
+    position: absolute;
+    right: 0;
+    width: 100%;
+    height: 70px;
+        background: url(/local/templates/s1/components/bitrix/menu/plantc/images/arr-d.png) no-repeat center right 28px;
+        cursor: pointer;
+  }
+}

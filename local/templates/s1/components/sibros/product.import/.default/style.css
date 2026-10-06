@@ -1,0 +1,103 @@
+.add_xml_to_import {
+    background-color: white;
+    padding: 30px;
+    cursor: pointer;
+}
+
+.xml_file_img {
+    width: 70px;
+    height: 70px;
+    border-radius: 13px;
+}
+
+.get_xml_title {
+
+}
+
+.get_xml_title::after, .select_shop_title::after {
+    content: " ";
+    background-image: url("./img/tick.png");
+    width: 30px;
+    height: 16px;
+    display: inline-block;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.get_xml_title.hidden_tick::after, .select_shop_title.hidden_tick::after {
+    display: none;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+/*.main-form__col .form-items{*/
+/*    margin-bottom: 20px;*/
+/*}*/
+
+.form-item.all_categories_from_file_container {
+    display: block;
+}
+
+.from_file {
+    cursor: pointer;
+}
+
+.all_categories .form-item__field {
+    display: block;
+    flex: none;
+}
+
+.all_categories .form-item__field, .all_categories .form-item__field select {
+    width: 250px;
+}
+
+.form-item.all_shops {
+    display: block;
+}
+
+.preloader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    text-align: right;
+    /* фоновый цвет */
+    background: transparent;
+    z-index: 1001;
+}
+
+.preloader svg {
+    left: 0;
+    top: 30%;
+}
+
+.preloader__image {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    width: 70px;
+    height: 70px;
+    margin-top: -35px;
+    margin-left: -35px;
+    animation: preloader-rotate 2s infinite linear;
+}
+
+@keyframes preloader-rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.loaded_hiding .preloader {
+    transition: 0.3s opacity;
+    opacity: 0;
+}
+
+.loaded .preloader {
+    display: none;
+}

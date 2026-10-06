@@ -1,0 +1,27 @@
+.scs-btn-up {
+	position: fixed;
+	right: 15px;
+	bottom: 70px;
+	transform: rotate(-90deg);
+	cursor: pointer;
+	opacity: 0;
+	visibility: hidden;
+	z-index: 99;
+	width: 40px;
+	height: 40px;
+	padding: 8px;
+	border-radius: 70px;
+	border: none;
+	background: #b0cb1f;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: opacity .25s ease-out,
+				visibility 0s linear .25s;
+}
+
+.scs-btn-up--active {
+	opacity: 1;
+	visibility: visible;
+	transition: opacity .25s ease-out;
+}

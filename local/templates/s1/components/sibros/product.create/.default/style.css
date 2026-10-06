@@ -1,0 +1,62 @@
+div.news-detail
+{
+	word-wrap: break-word;
+}
+div.news-detail img.detail_picture
+{
+	float:left;
+	margin:0 8px 6px 1px;
+}
+.news-date-time
+{
+	color:#486DAA;
+}
+.warn-form-item{
+	border: 2px #facea8 solid;
+}
+.form-item__add.add_sale_price_field{
+	cursor: pointer;
+}
+.preloader {
+	position: fixed;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	overflow: hidden;
+	text-align: right;
+	/* фоновый цвет */
+	background: transparent;
+	z-index: 1001;
+}
+
+.preloader_hidden{
+	display: none;
+}
+
+.preloader svg{
+	left: 0;
+	top: 30%;
+}
+.preloader__image {
+	position: relative;
+	top: 50%;
+	left: 50%;
+	width: 70px;
+	height: 70px;
+	margin-top: -35px;
+	margin-left: -35px;
+	animation: preloader-rotate 2s infinite linear;
+}
+@keyframes preloader-rotate {
+	100% {
+		transform: rotate(360deg);
+	}
+}
+.loaded_hiding .preloader {
+	transition: 0.3s opacity;
+	opacity: 0;
+}
+.loaded .preloader {
+	display: none;
+}

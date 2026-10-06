@@ -1,0 +1,39 @@
+# Bitrix cache
+/bitrix/cache/
+/bitrix/managed_cache/
+/bitrix/stack_cache/
+/bitrix/html_pages/
+
+# User uploads
+/upload/
+
+# Backups
+/bitrix/backup/
+*.tar.gz
+*.zip
+*.sql
+
+# Database credentials / settings
+/bitrix/.settings.php
+/bitrix/php_interface/dbconn.php
+
+# Environment
+.env
+.env.*
+
+# Restore/install scripts
+/restore.php
+/bitrixsetup.php
+
+# Logs
+*.log
+/php_errors.log
+/error_log
+
+# IDE
+.idea/
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db

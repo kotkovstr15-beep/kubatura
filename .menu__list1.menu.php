@@ -1,0 +1,39 @@
+<?
+$aMenuLinks = Array(
+	Array(
+		"О Кубатура", 
+		"/o-tssr-kubatura/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"3D-тур", 
+		"/3d-tur/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Реклама", 
+		"/reklama.php", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Арендаторам", 
+		"/arendatoram/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Навигация", 
+		"/karta-tssr/", 
+		Array(), 
+		Array(), 
+		"" 
+	)
+);
+?>

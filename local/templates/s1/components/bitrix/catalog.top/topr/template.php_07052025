@@ -1,0 +1,66 @@
+<?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
+/** @var array $arParams */
+/** @var array $arResult */
+/** @global CMain $APPLICATION */
+/** @global CUser $USER */
+/** @global CDatabase $DB */
+/** @var CBitrixComponentTemplate $this */
+/** @var string $templateName */
+/** @var string $templateFile */
+/** @var string $templateFolder */
+/** @var string $componentPath */
+/** @var CBitrixComponent $component */
+$this->setFrameMode(true);
+?>
+
+	<?if(count($arResult["ITEMS"]) > 0): foreach($arResult["ITEMS"] as $arItem):
+							$ob = false;
+							if($arItem["PROPERTIES"]['SHOP']['VALUE'])
+							{
+									\Bitrix\Main\Loader::includeModule('iblock');
+
+									$arSort = array('ID' => 'ASC');
+									$arFilter = array('=ID' => $arItem["PROPERTIES"]["SHOP"]["VALUE"], 'IBLOCK_ID' => $arItem["PROPERTIES"]["SHOP"]['LINK_IBLOCK_ID']);
+									$arSelect = array();
+									$res = CIBlockElement::getList($arSort, $arFilter, false, array('nTopCount' => 1), $arSelect);
+									if($ob = $res->GetNextElement()):
+										$arFields = $ob->GetFields();
+										$arProps = $ob->GetProperties();
+									endif;
+							}
+
+							?>
+						<div class="swiper-slide">
+								<div class="similar-item">
+									<div class="labels">
+										<?if($arItem["PROPERTIES"]['NEW']['VALUE']):?>
+										<div class="label label_blue">
+											<div class="label__wrap">Новинка</div>
+										</div>
+										<?endif;?>
+										<?if($arItem["PROPERTIES"]['SALE']['VALUE']):?>
+										<div class="label">
+											<div class="label__wrap"><?=$arItem["PROPERTIES"]['SALE']['VALUE']?></div>
+										</div>
+										<?endif;?>
+									</div>
+									<a href="<?=$arItem["DETAIL_PAGE_URL"]?>" class="similar-item__img">
+										<div style="background-image: url('<?=$arItem["PREVIEW_PICTURE"]['SRC']?>');"></div>
+									</a>
+									<div class="similar-item__content">
+											<?if($ob):?>
+										<p class="similar-item__category"><a href="<?=$arFields["DETAIL_PAGE_URL"]?>"><?=$arFields["NAME"]?></a></p>
+											<?endif;?>
+											<h5 class="similar-item__head">
+												<span class="similar-item__head-wrap">
+													<a href="<?=$arItem["DETAIL_PAGE_URL"]?>" class="link-head"><?=$arItem["NAME"]?></a>
+												</span>
+											</h5>
+										<div class="price">
+											<? if($arItem["PROPERTIES"]['SALE_PRICE']['VALUE']):?><p class="price__old"><?=$arItem["PROPERTIES"]['SALE_PRICE']['VALUE'] ? $arItem["PROPERTIES"]['SALE_PRICE']['VALUE'] ." ₽": "&nbsp;"?></p>
+											<?endif;?><p class="price__new"><?=$arItem["PROPERTIES"]['PRICE']['VALUE'] ? $arItem["PROPERTIES"]['PRICE']['VALUE'] ." ₽": "&nbsp;"?></p>
+										</div>
+									</div>
+								</div>
+							</div>
+<?endforeach;	endif;?>

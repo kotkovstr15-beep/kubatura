@@ -1,0 +1,97 @@
+<? if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die();
+
+use \Bitrix\Main\Localization\Loc;
+
+
+/**
+ * @global CMain $APPLICATION
+ * @var array $arParams
+ * @var array $arResult
+ * @var CatalogSectionComponent $component
+ * @var CBitrixComponentTemplate $this
+ * @var string $templateName
+ * @var string $componentPath
+ * @var string $templateFolder
+ */
+
+$this->setFrameMode(false);
+
+if( $arResult["ITEMS"] && count( $arResult["ITEMS"] ) > 0 )
+{
+
+?>
+				<section class="shops s-margin">
+					<div class="container">
+<noindex>
+						<div class="title">
+							<div class="title__grid">
+								<div class="title__main">
+									<div class="tabs">
+										<div class="tabs__grid">
+											<span class="tabs__item active"><a href="/shops/">Магазины</a></span>
+										</div>
+									</div>
+								</div>
+								<div class="title__btn">
+									<a href="/karta-tssr/" class="btn btn_medium"><i class="ic ic-map"></i> Карта</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="shops__grid">
+
+							<?foreach($arResult["ITEMS"] as $arItem){
+								?>
+							<div class="shops__col">
+								<a href="<?=$arItem["DETAIL_PAGE_URL"]?>" class="shop-item">
+									<?if($arItem["PREVIEW_PICTURE"]):
+									$file = CFile::ResizeImageGet($arItem["PREVIEW_PICTURE"], array('width'=>220, 'height'=>100), BX_RESIZE_IMAGE_PROPORTIONAL, false, array(), false, 100);
+									if(!$file['src'])
+											$file['src'] = CFile::GetPath($arItem["PREVIEW_PICTURE"]);
+									?>
+									<div class="shop-item__bg" style="background-image: url('<?=$file['src']?>');"></div>
+									<?endif;?>
+									<?
+									if($arItem["PROPERTIES"]["LOGO_1"]["VALUE"]):
+										$file = CFile::ResizeImageGet($arItem["PROPERTIES"]["LOGO_1"]["VALUE"], array('width'=>220, 'height'=>100), BX_RESIZE_IMAGE_PROPORTIONAL, false, array(), false, 100);
+										if(!$file['src'])
+											$file['src'] = CFile::GetPath($arItem["PROPERTIES"]["LOGO_1"]["VALUE"]);
+									endif;
+									?>
+									<?if($file['src']):?>
+									<div class="shop-item__img img-box">
+										<img src="<?=$file['src']?>" alt="">
+									</div>
+									<?endif;?>
+									<div class="shop-item__place">
+										<div class="shop-item__place-wrap">
+										<?if($arItem["PROPERTIES"]["CORPUS"]["VALUE"]):?>
+											<span>Корпус <?=$arItem["PROPERTIES"]["CORPUS"]["VALUE"]?></span>
+										<?endif;?>
+										<?if($arItem["PROPERTIES"]["ETAG"]["VALUE"]):?>
+											<span>Этаж <?=$arItem["PROPERTIES"]["ETAG"]["VALUE"]?></span>
+										<?endif;?>
+										<?if($arItem["PROPERTIES"]["SECTION"]["VALUE"]):?>
+											<span>Секция <?=$arItem["PROPERTIES"]["SECTION"]["VALUE"]?></span>
+										<?endif;?>
+										</div>
+									</div>
+									<div class="shop-item__action">
+										<h5 class="shop-item__head"><?=$arItem["NAME"]?></h5>
+										<span class="shop-item__arrow"><i class="ic ic-next"></i></span>
+									</div>
+								</a>
+							</div>
+							<?
+							}
+							?>
+
+						</div>
+
+						<?=$arResult["NAV_STRING"]?>
+					</noindex>
+					</div>
+				</section>
+				<?
+}
+?>

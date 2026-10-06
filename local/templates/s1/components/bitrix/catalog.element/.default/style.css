@@ -1,0 +1,112 @@
+.btn.btn_in-cart {
+    background: transparent;
+}
+
+.btn.btn_delete {
+    color: white;
+    margin-top: 10px;
+    background-color: #6c757d;
+}
+
+.btn.btn_middle_size {
+    font-size: 16px;
+}
+.price .btn.btn_small {
+  padding: 9px 20px;
+    min-width: 136px;
+    font-size: 10px;
+    margin-right: -21px;
+    margin-top: -10px;
+background: #0078bf;
+color: #fff;
+font-weight: bold;
+}
+.product-info__main .price{
+  display: flow-root;
+}
+@media only screen and (max-width: 1699px){
+  .price .btn.btn_small {
+    margin-right: -10px;
+
+  }
+}
+@media only screen and (max-width: 767px){
+  .price .btn.btn_small {
+  float: left;
+margin-left: 36px;
+}
+}
+
+.product-info__head_z1 { 
+	line-height: 1.45;
+    text-transform: uppercase;
+    font-size: 18px;
+	font-weight: 600;
+}	
+
+.zag4 { 
+	line-height: 1.45;
+    text-transform: uppercase;
+    font-size: 18px;
+	font-weight: 600;
+}
+
+.zag2 {
+    line-height: 1.25;
+    font-size: 32px;
+	margin: 0 0 1rem;
+    font-weight: 600;
+}
+
+.zag5 {
+    line-height: 1.45;
+    font-size: 18px;
+	margin: 0 0 1rem;
+    font-weight: 600;
+}
+	
+@media only screen and (max-width: 1699px) {
+    .product-info__head_z1 {
+        line-height: 1.5;
+        font-size: 18px;
+    }
+    .zag4 {
+        line-height: 1.5;
+        font-size: 18px;
+    }
+    .zag2 {
+        line-height: 1.3;
+        font-size: 22px;
+    }
+    .zag5 {
+        line-height: 1.5;
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 1199px) {
+    .product-info__head_z1 {
+        font-size: 16px;
+    }
+    .zag4 {
+        font-size: 16px;
+    }
+    .zag5 {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 479px) {
+    .product-info__head_z1 {
+        font-size: 14px;
+    }
+    .zag4 {
+        font-size: 14px;
+    }
+    .zag2 {
+        font-size: 18px;
+    }
+    .zag5 {
+        font-size: 14px;
+    }
+}

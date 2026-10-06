@@ -1,0 +1,81 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?aktiyh');
+  src:  url('fonts/icomoon.eot?aktiyh#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.woff?aktiyh') format('woff'),
+    url('fonts/icomoon.ttf?aktiyh') format('truetype'),
+    url('fonts/icomoon.svg?aktiyh#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+.ic {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.ic-bin:before {
+  content: "\e912";
+}
+.ic-cart:before {
+  content: "\e90f";
+}
+.ic-clock-full:before {
+  content: "\e911";
+}
+.ic-check-full:before {
+  content: "\e90e";
+}
+.ic-clock:before {
+  content: "\e903";
+}
+.ic-route:before {
+  content: "\e900";
+}
+.ic-search:before {
+  content: "\e901";
+}
+.ic-map:before {
+  content: "\e902";
+}
+.ic-close:before {
+  content: "\e90d";
+}
+.ic-download:before {
+  content: "\e904";
+}
+.ic-prev:before {
+  content: "\e905";
+}
+.ic-next:before {
+  content: "\e906";
+}
+.ic-chevron-left:before {
+  content: "\e90c";
+}
+.ic-chevron-bottom:before {
+  content: "\e910";
+}
+.ic-phone:before {
+  content: "\e90b";
+}
+.ic-globe:before {
+  content: "\e90a";
+}
+.ic-instagram:before {
+  content: "\e907";
+}
+.ic-vk:before {
+  content: "\e909";
+}

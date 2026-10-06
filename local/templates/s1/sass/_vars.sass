@@ -1,0 +1,20 @@
+@import "bourbon"
+
+$font: "Montserrat", sans-serif
+
+$c-1: #B0CB1F
+$c-2: #0078BF
+$c-3: #ED9715
+
+$gradient: linear-gradient(120deg, #0078BF 25%, #1587CB 95%)
+
+@mixin bg($url, $pos:center)
+	background: url($url) $pos
+	background-size: cover
+
+@mixin ic($lh:1)
+	font-family: 'icomoon'
+	text-transform: none
+	font-weight: normal
+	font-style: normal
+	line-height: $lh

@@ -1,0 +1,27 @@
+.colorlist{background: #fff; font-weight: 600; display: flex;
+font-size: 12px;
+line-height: 16px;
+text-transform: uppercase;}
+.m10{margin: 10px;}
+.m20{margin: 20px;}
+.w33{width: 33.33%;}
+.p20{padding: 20px;}
+.i{display: table-column;}
+
+@media (max-width:620px){
+	.colorlist{width: 100%; margin-bottom: 20px; float: left; display: block;}
+.colorlist .i.dn{display: block; float: none; cursor: pointer;}
+.colorlist .i.dn::after {
+    content: "";
+  float: right;
+    width: 32px;
+    height: 32px;
+    background: url(/local/img/ar-dow.png) no-repeat center;
+    cursor: pointer;}
+.colorlist .i{display: none; width: 100%;}
+.colorlist.is-active .i{
+	display: block;
+}
+.colorlist .name{float: none; line-height: 36px;}
+.colorlist.p20{padding: 13px;}
+}

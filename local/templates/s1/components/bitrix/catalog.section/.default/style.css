@@ -1,0 +1,32 @@
+.zag5 {
+    line-height: 1.45;
+    font-size: 18px;
+	margin: 0 0 1rem;
+    font-weight: 600;
+}
+
+@media only screen and (max-width: 1699px) {
+    .zag5 {
+        line-height: 1.5;
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 1199px) {
+    .zag5 {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 479px) {
+    .zag5 {
+        font-size: 14px;
+    }
+}
+
+.similar-item__img img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+}

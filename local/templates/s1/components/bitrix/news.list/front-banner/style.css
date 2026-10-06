@@ -1,0 +1,28 @@
+.banner-item {
+	position: relative;
+}
+.banner-item > img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+}
+.banner-item__wrapper {
+	position: relative;
+	z-index: 1;
+}
+.banner-thumb {
+	position: relative;
+}
+.banner-thumb > img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+}

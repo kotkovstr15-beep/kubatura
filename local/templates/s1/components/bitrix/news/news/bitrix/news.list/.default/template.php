@@ -1,0 +1,101 @@
+<?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
+/** @var array $arParams */
+/** @var array $arResult */
+/** @global CMain $APPLICATION */
+/** @global CUser $USER */
+/** @global CDatabase $DB */
+/** @var CBitrixComponentTemplate $this */
+/** @var string $templateName */
+/** @var string $templateFile */
+/** @var string $templateFolder */
+/** @var string $componentPath */
+/** @var CBitrixComponent $component */
+$this->setFrameMode(true);
+
+	\Bitrix\Main\Loader::includeModule('iblock');
+	$arSection = array(
+		0 => array(
+			"FIRST"=>'Все',
+			"NAME"=>$arResult["NAME"],
+			'CODE'=>''
+		)
+	);
+	$rsSect = \CIBlockSection::GetList(
+		array('SORT' => 'ASC'),
+		array(
+			'IBLOCK_ID' => $arParams['IBLOCK_ID'],
+			"ACTIVE" => "Y"
+		),
+		false,
+		array('ID','NAME',"CODE")
+	);
+	while($arSect = $rsSect->Fetch())
+	{
+		$arSection[$arSect['ID']] = $arSect;
+	}
+	
+	$arParams["PARENT_SECTION"] = (int)$arParams["PARENT_SECTION"];
+?>
+						<div class="title">
+							<h1 class="title__head"><?=$arSection[$arParams["PARENT_SECTION"]]["NAME"]?></h1>
+							<div class="title__grid">
+								<div class="title__main">
+									<div class="tabs">
+										<div class="tabs__grid"><?
+											foreach($arSection as $k => $v){
+												
+												$url = $arParams["IBLOCK_URL"];
+												if($k != 0)
+												{
+													$url .= $v['CODE'].'/'; 
+												}
+												
+												?><a href="<?=$url?>" class="tabs__item tabs__item_medium<?
+												
+												if($arParams["PARENT_SECTION"] == $k){
+													?> active<?
+												}
+												
+												?>"><?
+												
+													if(0 == $k){
+														echo $v['FIRST'];
+													}
+													else
+													{
+														echo $v['NAME'];
+													}
+													
+												?></a>
+											<?}?>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+<div class="news-inn__grid">
+<?foreach($arResult["ITEMS"] as $arItem):?>
+	<?
+	$this->AddEditAction($arItem['ID'], $arItem['EDIT_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_EDIT"));
+	$this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_DELETE"), array("CONFIRM" => GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM')));
+	?>
+							<div class="news-inn__col" id="<?=$this->GetEditAreaId($arItem['ID']);?>">
+								<a href="<?=$arItem["DETAIL_PAGE_URL"]?>" class="news-item" style="background-image: url('<?=$arItem["PREVIEW_PICTURE"]["SRC"]?>');">
+									<?if(array_key_exists($arItem["IBLOCK_SECTION_ID"],$arSection)):?>
+									<div class="news-item__label"><?=$arSection[$arItem["IBLOCK_SECTION_ID"]]["NAME"]?> <div class="news-item__line"></div>
+									<?endif;?>
+									</div>
+									<div class="news-item__wrap">
+										<div class="news-item__content">
+											<p class="news-item__date"><?echo $arItem["DISPLAY_ACTIVE_FROM"]?></p>
+											<div class="zag_tx_ns_2"><?echo $arItem["NAME"]?></div>
+										</div>
+									</div>
+								</a>
+							</div>
+<?endforeach;?>
+</div>
+<?if($arParams["DISPLAY_BOTTOM_PAGER"]):?>
+	<?=$arResult["NAV_STRING"]?>
+<?endif;?>

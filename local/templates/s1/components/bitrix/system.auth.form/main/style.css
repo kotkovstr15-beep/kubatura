@@ -1,0 +1,89 @@
+div.bx-system-auth-form span.bx-auth-secure {
+    background-color: #FFFAE3;
+    border: 1px solid #DEDBC8;
+    padding: 2px;
+    display: inline-block;
+    vertical-align: bottom;
+    margin-top: -1px;
+}
+
+div.bx-system-auth-form div.bx-auth-secure-icon {
+    background-image: url(images/sec.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 19px;
+    height: 18px;
+}
+
+div.bx-system-auth-form div.bx-auth-secure-unlock {
+    background-image: url(images/sec-unlocked.png);
+}
+
+.authorize_container{
+
+}
+.authorize_container input{
+    border: 0;
+}
+
+.btn.btn_medium.btn_auth{
+    margin-top: 20px;
+    min-width: 235px;
+}
+.not_robot_label{
+    display: block;
+}
+
+/*.btn.btn_medium.btn_auth_after{*/
+/*    margin-top: 20px;*/
+/*    min-width: 235px;*/
+/*    display: none;*/
+/*}*/
+
+
+.preloader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    text-align: right;
+    /* фоновый цвет */
+    background: transparent;
+    z-index: 1001;
+}
+.preloader svg{
+    left: 0;
+    top: 30%;
+}
+
+.preloader__image {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    width: 70px;
+    height: 70px;
+    margin-top: -35px;
+    margin-left: -35px;
+    animation: preloader-rotate 2s infinite linear;
+}
+
+.preloader_hidden{
+    display: none;
+}
+
+@keyframes preloader-rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.loaded_hiding .preloader {
+    transition: 0.3s opacity;
+    opacity: 0;
+}
+
+.loaded .preloader {
+    display: none;
+}
